@@ -1,102 +1,6 @@
 'use client';
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
 import CustomAccordion, { AccordionItemData } from '@/components/ui/accordion-custom';
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-const chartData = {
-    labels: ['Google Meet', 'Zoom', 'Microsoft Teams'],
-    datasets: [{
-        label: 'عدد المشاركين',
-        data: [100, 100, 100],
-        backgroundColor: 'hsl(var(--foreground-custom), 0.7)',
-        borderColor: 'hsl(var(--foreground-custom), 1)',
-        borderWidth: 1
-    }, {
-        label: 'الوقت المسموح (دقائق)',
-        data: [60, 40, 0], 
-        backgroundColor: 'hsl(var(--accent-custom), 0.7)',
-        borderColor: 'hsl(var(--accent-custom), 1)',
-        borderWidth: 1
-    }]
-};
-
-const chartOptions: any = {
-    responsive: true,
-    maintainAspectRatio: false,
-    indexAxis: 'y' as const,
-    scales: {
-        x: {
-            beginAtZero: true,
-            ticks: {
-                 color: `hsl(var(--foreground-custom))`,
-                callback: function(value: string | number) {
-                    if (Number(value) === 0 && this.getLabelForValue(Number(value)) === 'Microsoft Teams') {
-                        return 'غير محدود';
-                    }
-                    return value;
-                }
-            },
-            grid: {
-                color: `hsl(var(--border))`
-            }
-        },
-        y: {
-            ticks: {
-                color: `hsl(var(--foreground-custom))`
-            },
-            grid: {
-                color: `hsl(var(--border))`
-            }
-        }
-    },
-    plugins: {
-        tooltip: {
-            callbacks: {
-                label: function(context: any) {
-                    let label = context.dataset.label || '';
-                    if (label) {
-                        label += ': ';
-                    }
-                    if (context.datasetIndex === 1 && context.raw === 0) {
-                         label += 'غير محدود';
-                    } else {
-                        label += context.formattedValue;
-                    }
-                    return label;
-                }
-            }
-        },
-        title: {
-          display: true,
-          text: 'ملاحظة: "غير محدود" لـ Teams يشير إلى عدم وجود حد زمني',
-          color: `hsl(var(--muted-foreground))`
-        },
-        legend: {
-          position: 'top' as const,
-          labels: {
-            color: `hsl(var(--foreground-custom))`
-          }
-        },
-    }
-};
 
 const platformDetails: AccordionItemData[] = [
     { 
@@ -215,13 +119,6 @@ export default function PlatformComparisonSection() {
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">مقارنة بين أشهر المنصات الرقمية (النسخ المجانية)</h2>
             <div className="mb-12">
                  <CustomAccordion items={platformDetails} type="multiple" />
-            </div>
-            
-            <div className="card-custom p-4 rounded-lg">
-                <h3 className="text-lg md:text-xl font-bold mb-4 text-center">📊 مقارنة سريعة</h3>
-                <div className="relative h-[40vh] md:h-[60vh] max-h-[500px] w-full max-w-4xl mx-auto">
-                    <Bar options={chartOptions} data={chartData} />
-                </div>
             </div>
         </section>
     );
