@@ -71,7 +71,7 @@ export default function LeadershipSection() {
                         <div className="text-center md:text-right flex-1">
                              <h3 className="text-xl md:text-2xl font-bold">مهندس. اسلام فارس عبد الجليل</h3>
                              <p className="text-base md:text-lg text-muted-foreground mb-4">رئيس اللجنة المركزية للتنظيم</p>
-                             <div className="flex justify-center md:justify-start gap-x-6 gap-y-2 flex-wrap text-sm md:text-base">
+                             <div className="text-sm md:text-base space-y-1">
                                  <p>🎂 <b className="font-semibold text-primary">العمر:</b> 25 سنه</p>
                                  <p>🎓 <b className="font-semibold text-primary">المؤهل:</b> بكالوريوس هندسه مدني</p>
                                  <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> محافظة الجيزة</p>
@@ -118,7 +118,7 @@ export default function LeadershipSection() {
                             <div className="text-center sm:text-right flex-1">
                                 <h3 className="text-lg md:text-xl font-bold">ريـــم مـنصــــور الــفقــي</h3>
                                 <p className="text-sm md:text-md text-muted-foreground mb-4">نائب رئيس اللجنة المركزية للتنظيم</p>
-                                <div className="flex justify-center sm:justify-start gap-x-6 gap-y-2 flex-wrap text-xs md:text-sm">
+                                <div className="text-xs md:text-sm space-y-1">
                                     <p>🎂 <b className="font-semibold text-primary">العمر:</b> 20 سنة</p>
                                     <p>🎓 <b className="font-semibold text-primary">المؤهل:</b> ليسانس لغات وترجمة</p>
                                     <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> محافظة الغربية</p>
@@ -167,7 +167,7 @@ export default function LeadershipSection() {
                             <div className="text-center sm:text-right flex-1">
                                 <h3 className="text-lg md:text-xl font-bold">احمد حسن عبدالرحيم</h3>
                                 <p className="text-sm md:text-md text-muted-foreground mb-4">نائب رئيس اللجنة المركزية للتنظيم</p>
-                                <div className="flex justify-center sm:justify-start gap-x-6 gap-y-2 flex-wrap text-xs md:text-sm">
+                                <div className="text-xs md:text-sm space-y-1">
                                     <p>🎂 <b className="font-semibold text-primary">العمر:</b> 22 سنة</p>
                                     <p>🎓 <b className="font-semibold text-primary">المؤهل:</b> بكالوريوس تجارة</p>
                                     <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> السعودية</p>
