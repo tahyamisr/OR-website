@@ -22,7 +22,7 @@ export default function LeadershipSection() {
 
     return (
         <section id="leadership" className="scroll-mt-24">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">الهيكل التنظيمي للجنة المركزية 🏛️</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-8 text-center">الهيكل التنظيمي للجنة المركزية 🏛️</h2>
             <div className="grid grid-cols-1 gap-8">
                 <div className="card-custom p-6 rounded-lg text-center">
                      <h3 className="text-xl md:text-2xl font-bold">أ. مصطفي قطامش</h3>
