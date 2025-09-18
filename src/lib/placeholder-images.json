@@ -3,25 +3,25 @@
     {
       "id": "islam-fares",
       "description": "إسلام فارس، رئيس اللجنة المركزية",
-      "imageUrl": "https://picsum.photos/seed/1/400/400",
+      "imageUrl": "https://www.dropbox.com/scl/fi/d7bxq2cpbe8vi7yqte2m7/.png?rlkey=ct4wilcas6bnlfwsvr5a3clol&raw=1",
       "imageHint": "man portrait"
     },
     {
       "id": "reem-mansour",
       "description": "ريم منصور، نائب الرئيس",
-      "imageUrl": "https://picsum.photos/seed/2/400/400",
+      "imageUrl": "https://www.dropbox.com/scl/fi/b431tpa5w2ewa1fumdxjd/.png?rlkey=k80uqv6q13nerw9gm02wwhrm0&raw=1",
       "imageHint": "woman portrait"
     },
     {
       "id": "ahmed-hassan",
       "description": "أحمد حسن، رئيس الخدمات اللوجستية",
-      "imageUrl": "https://picsum.photos/seed/3/400/400",
+      "imageUrl": "https://www.dropbox.com/scl/fi/ozyqydpjfmbn6xaadmxaw/.png?rlkey=1znl674m1mwph66hgwctjha1x&raw=1",
       "imageHint": "man professional"
     },
     {
       "id": "hanin-islam",
       "description": "حنين إسلام، رئيسة الخدمات الرقمية",
-      "imageUrl": "https://picsum.photos/seed/4/400/400",
+      "imageUrl": "https://www.dropbox.com/scl/fi/2id2ou8jafn7z2hxscr5i/.png?rlkey=9r5lh44rj98tlf34d3c8hpsau&raw=1",
       "imageHint": "woman professional"
     }
   ]
