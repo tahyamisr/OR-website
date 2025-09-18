@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronUp, MessageCircle, ZoomIn, Mail, Phone } from 'lucide-react';
+import { ChevronDown, ChevronUp, MessageCircle, ZoomIn, Mail } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import {
   DropdownMenu,
@@ -12,6 +12,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+
+const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="2" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+        {...props}
+    >
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <path d="M14.05 16.95A8.91 8.91 0 0 1 12.03 21.6c-2.31.2-4.63-.71-6.43-2.51s-2.7-4.12-2.5-6.43a9 9 0 0 1 4.65-7.07" opacity="0.3"></path>
+    </svg>
+);
+
 
 export default function LeadershipSection() {
     const [isIslamExpanded, setIsIslamExpanded] = useState(false);
@@ -40,7 +59,7 @@ export default function LeadershipSection() {
                                         <AvatarImage src={leadershipImages.mostafa.imageUrl} alt={leadershipImages.mostafa.description} data-ai-hint={leadershipImages.mostafa.imageHint} />
                                         <AvatarFallback>MK</AvatarFallback>
                                     </Avatar>
-                                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
                                         <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                                     </div>
                                 </div>
@@ -68,9 +87,9 @@ export default function LeadershipSection() {
                                     </a>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <a href="tel:01097096401">
-                                        <Phone className="ml-2 h-4 w-4" />
-                                        <span>اتصال هاتفي</span>
+                                    <a href="https://wa.me/201097096401" target="_blank" rel="noopener noreferrer">
+                                        <WhatsAppIcon className="ml-2 h-4 w-4" />
+                                        <span>واتساب</span>
                                     </a>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
@@ -88,7 +107,7 @@ export default function LeadershipSection() {
                                             <AvatarImage src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} data-ai-hint={leadershipImages.islam.imageHint}/>
                                             <AvatarFallback>IF</AvatarFallback>
                                         </Avatar>
-                                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
                                             <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     </div>
@@ -136,9 +155,9 @@ export default function LeadershipSection() {
                                     </a>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <a href="tel:01141800053">
-                                        <Phone className="ml-2 h-4 w-4" />
-                                        <span>اتصال هاتفي</span>
+                                    <a href="https://wa.me/201141800053" target="_blank" rel="noopener noreferrer">
+                                        <WhatsAppIcon className="ml-2 h-4 w-4" />
+                                        <span>واتساب</span>
                                     </a>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
@@ -157,7 +176,7 @@ export default function LeadershipSection() {
                                                 <AvatarImage src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} data-ai-hint={leadershipImages.reem.imageHint}/>
                                                 <AvatarFallback>RM</AvatarFallback>
                                             </Avatar>
-                                            <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
                                                 <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
                                             </div>
                                         </div>
@@ -209,9 +228,9 @@ export default function LeadershipSection() {
                                         </a>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem asChild>
-                                        <a href="tel:01270151360">
-                                            <Phone className="ml-2 h-4 w-4" />
-                                            <span>اتصال هاتفي</span>
+                                        <a href="https://wa.me/201270151360" target="_blank" rel="noopener noreferrer">
+                                            <WhatsAppIcon className="ml-2 h-4 w-4" />
+                                            <span>واتساب</span>
                                         </a>
                                     </DropdownMenuItem>
                                 </DropdownMenuContent>
@@ -228,7 +247,7 @@ export default function LeadershipSection() {
                                                 <AvatarImage src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} data-ai-hint={leadershipImages.ahmed.imageHint}/>
                                                 <AvatarFallback>AH</AvatarFallback>
                                             </Avatar>
-                                            <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
                                                 <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
                                             </div>
                                         </div>
@@ -279,9 +298,9 @@ export default function LeadershipSection() {
                                         </a>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem asChild>
-                                        <a href="tel:01017841215">
-                                            <Phone className="ml-2 h-4 w-4" />
-                                            <span>اتصال هاتفي</span>
+                                        <a href="https://wa.me/201017841215" target="_blank" rel="noopener noreferrer">
+                                            <WhatsAppIcon className="ml-2 h-4 w-4" />
+                                            <span>واتساب</span>
                                         </a>
                                     </DropdownMenuItem>
                                 </DropdownMenuContent>
@@ -300,7 +319,7 @@ export default function LeadershipSection() {
                                             <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
                                             <AvatarFallback>HI</AvatarFallback>
                                         </Avatar>
-                                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
                                             <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     </div>
@@ -338,9 +357,9 @@ export default function LeadershipSection() {
                                     </a>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <a href="tel:01018200583">
-                                        <Phone className="ml-2 h-4 w-4" />
-                                        <span>اتصال هاتفي</span>
+                                    <a href="https://wa.me/201018200583" target="_blank" rel="noopener noreferrer">
+                                        <WhatsAppIcon className="ml-2 h-4 w-4" />
+                                        <span>واتساب</span>
                                     </a>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
@@ -351,3 +370,5 @@ export default function LeadershipSection() {
         </section>
     );
 }
+
+    
