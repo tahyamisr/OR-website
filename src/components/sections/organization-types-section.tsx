@@ -11,6 +11,7 @@ import {
   Legend,
 } from 'chart.js';
 import CustomAccordion, { AccordionItemData } from '@/components/ui/accordion-custom';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 ChartJS.register(
@@ -175,34 +176,6 @@ const onlineAccordionItems: AccordionItemData[] = [
     </ul>` }
 ];
 
-const mainOrganizationTypes: AccordionItemData[] = [
-    {
-        title: "🎪 التنظيم الأوفلاين (الميداني)",
-        content: `
-            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
-            <div id="offline-accordion-content"></div>
-        `
-    },
-    {
-        title: "💻 التنظيم الأونلاين (الرقمي)",
-        content: `
-            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center">فريق التنظيم الرقمي</h3>
-            <div id="online-accordion-content"></div>
-            <div class="mt-12">
-                <h3 class="text-xl md:text-2xl font-bold mb-8 text-center">مقارنة بين أشهر برامج الاجتماعات (النسخ المجانية)</h3>
-                <div class="grid md:grid-cols-2 gap-8 mb-8" id="platform-details-container">
-                </div>
-                <div class="card-custom p-4 rounded-lg">
-                    <h4 class="text-lg md:text-xl font-bold mb-4 text-center">📊 مقارنة سريعة</h4>
-                    <div class="relative h-[40vh] md:h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
-                        <canvas id="platformsChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        `
-    }
-];
-
 const eventGoalsItems: AccordionItemData[] = [
     { 
         title: '🎯 الغاية من إقامة الأحداث', 
@@ -302,46 +275,6 @@ export default function OrganizationTypesSection() {
     ];
 
     React.useEffect(() => {
-        const offlineAccordionContainer = document.getElementById('offline-accordion-content');
-        if (offlineAccordionContainer) {
-            const root = (window as any).ReactDOM.createRoot(offlineAccordionContainer);
-            root.render(<CustomAccordion items={offlineAccordionItems} />);
-        }
-
-        const onlineAccordionContainer = document.getElementById('online-accordion-content');
-        if (onlineAccordionContainer) {
-             const root = (window as any).ReactDOM.createRoot(onlineAccordionContainer);
-            root.render(<CustomAccordion items={onlineAccordionItems} />);
-        }
-        
-        const platformContainer = document.getElementById('platform-details-container');
-        if(platformContainer){
-            platformContainer.innerHTML = platformDetails.map(platform => `
-                <div key=${platform.name} class="card-custom p-6 rounded-lg">
-                    <h4 class="text-xl font-bold mb-3">${platform.name === 'Google Meet' ? '🔵 Google Meet' : platform.name === 'Zoom' ? '🟦 Zoom' : platform.name === 'Microsoft Teams' ? '🏢 Microsoft Teams' : '✈️ Telegram'}</h4>
-                    <p class="mb-4 text-sm text-muted-foreground">${platform.uses}</p>
-                    <div class="space-y-4">
-                        <div>
-                            <h5 class="font-semibold text-primary mb-1">المميزات:</h5>
-                            <ul class="list-disc list-inside space-y-1 text-sm">
-                                ${platform.features.map((feature: string) => `<li>✔️ ${feature}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="font-semibold text-primary mb-1">العيوب:</h5>
-                            <ul class="list-disc list-inside space-y-1 text-sm">
-                                ${platform.cons.map((con: string) => `<li>❌ ${con}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <div class="flex flex-wrap gap-4 text-sm pt-2 border-t mt-4">
-                            <p><b class="font-semibold">👥 المشاركين:</b> ${platform.participants}</p>
-                            <p><b class="font-semibold">⏰ الوقت:</b> ${platform.time}</p>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
         const chartCanvas = document.getElementById('platformsChart') as HTMLCanvasElement;
         if(chartCanvas){
              let chart = ChartJS.getChart(chartCanvas);
@@ -363,10 +296,60 @@ export default function OrganizationTypesSection() {
              <div className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
                 <p className="mb-4">ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة:</p>
             </div>
-             <CustomAccordion items={mainOrganizationTypes} type="multiple" />
+             <Tabs defaultValue="offline" className="w-full">
+                <TabsList className="grid w-full grid-cols-2">
+                    <TabsTrigger value="offline">🎪 التنظيم الميداني</TabsTrigger>
+                    <TabsTrigger value="online">💻 التنظيم الرقمي</TabsTrigger>
+                </TabsList>
+                <TabsContent value="offline" className="mt-6">
+                     <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
+                     <CustomAccordion items={offlineAccordionItems} />
+                </TabsContent>
+                <TabsContent value="online" className="mt-6">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">فريق التنظيم الرقمي</h3>
+                    <CustomAccordion items={onlineAccordionItems} />
+                    <div className="mt-12">
+                        <h3 className="text-xl md:text-2xl font-bold mb-8 text-center">مقارنة بين أشهر برامج الاجتماعات (النسخ المجانية)</h3>
+                        <div className="grid md:grid-cols-2 gap-8 mb-8">
+                         {platformDetails.map(platform => (
+                            <div key={platform.name} className="card-custom p-6 rounded-lg">
+                                <h4 className="text-xl font-bold mb-3">{platform.name === 'Google Meet' ? '🔵 Google Meet' : platform.name === 'Zoom' ? '🟦 Zoom' : platform.name === 'Microsoft Teams' ? '🏢 Microsoft Teams' : '✈️ Telegram'}</h4>
+                                <p className="mb-4 text-sm text-muted-foreground">{platform.uses}</p>
+                                <div className="space-y-4">
+                                    <div>
+                                        <h5 className="font-semibold text-primary mb-1">المميزات:</h5>
+                                        <ul className="list-disc list-inside space-y-1 text-sm">
+                                            {platform.features.map((feature: string) => <li key={feature}>✔️ {feature}</li>)}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 className="font-semibold text-primary mb-1">العيوب:</h5>
+                                        <ul className="list-disc list-inside space-y-1 text-sm">
+                                            {platform.cons.map((con: string) => <li key={con}>❌ {con}</li>)}
+                                        </ul>
+                                    </div>
+                                    <div className="flex flex-wrap gap-4 text-sm pt-2 border-t mt-4">
+                                        <p><b className="font-semibold">👥 المشاركين:</b> {platform.participants}</p>
+                                        <p><b className="font-semibold">⏰ الوقت:</b> {platform.time}</p>
+                                    </div>
+                                </div>
+                            </div>
+                         ))}
+                        </div>
+                        <div className="card-custom p-4 rounded-lg">
+                            <h4 className="text-lg md:text-xl font-bold mb-4 text-center">📊 مقارنة سريعة</h4>
+                            <div className="relative h-[40vh] md:h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
+                                <canvas id="platformsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </TabsContent>
+            </Tabs>
              <div className="mt-12">
                 <CustomAccordion items={eventGoalsItems} type="multiple" />
             </div>
         </section>
     );
 }
+
+    
