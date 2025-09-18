@@ -14,7 +14,7 @@ export default function DigitalServicesSection() {
                         <h3 className="text-lg md:text-xl font-bold mb-2 text-black">📨 خدمة دعوات تحيا مصر</h3>
                         <p className="text-sm md:text-base mb-4">سيستم ذكي بيبعت دعوات مخصوصة باسم كل واحد على إيميله علطول.</p>
                     </div>
-                    <Button variant="outline" disabled className="w-full mt-4">
+                    <Button variant="outline" disabled className="w-full mt-4 font-bold">
                         <Lock className="ml-2 h-4 w-4" />
                         نظام داخلي
                     </Button>
@@ -24,7 +24,7 @@ export default function DigitalServicesSection() {
                         <h3 className="text-lg md:text-xl font-bold mb-2 text-black">📱 نظام تسجيل حضور تحيا مصر</h3>
                         <p className="text-sm md:text-base mb-4">طريقة ديجيتال بتعتمد على QR Code عشان تسجل حضور المشاركين بسرعة ودقة أول ما يوصلوا.</p>
                     </div>
-                    <Button variant="outline" disabled className="w-full mt-4">
+                    <Button variant="outline" disabled className="w-full mt-4 font-bold">
                          <Lock className="ml-2 h-4 w-4" />
                         نظام داخلي
                     </Button>
@@ -78,7 +78,7 @@ export default function DigitalServicesSection() {
                         <h3 className="text-lg md:text-xl font-bold mb-2 text-black">🎂 نظام تهنئة بأعياد الميلاد</h3>
                         <p className="text-sm md:text-base mb-4">سيستم ذكي بيبعت تهاني تلقائية في عيد ميلاد كل واحد بطريقة شخصية وحلوة على الإيميل والموبايل.</p>
                     </div>
-                     <Button variant="outline" disabled className="w-full mt-4">
+                     <Button variant="outline" disabled className="w-full mt-4 font-bold">
                          <Lock className="ml-2 h-4 w-4" />
                         نظام داخلي
                     </Button>
