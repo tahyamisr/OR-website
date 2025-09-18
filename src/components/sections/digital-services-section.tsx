@@ -5,8 +5,8 @@ export default function DigitalServicesSection() {
     return (
         <section id="services" className="scroll-mt-24">
              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">الخدمات الرقمية</h2>
-             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
-                إيمانًا بأهمية التكنولوجيا، طورت لجنة التنظيم مجموعة من الحلول الرقمية الذكية لتبسيط الإجراءات وتعزيز تجربة المشاركين، مما يعكس رؤيتنا في دمج الinnovation مع العمل التنظيمي الاحترافي.
+             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8 font-semibold text-muted-foreground">
+                حلول رقمية ذكية لتبسيط الإجراءات وتعزيز تجربة المشاركين في الفعاليات.
             </p>
              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="card-custom p-6 rounded-lg flex flex-col justify-between">
