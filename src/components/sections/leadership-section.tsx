@@ -34,8 +34,8 @@ export default function LeadershipSection() {
                                         <AvatarImage src={leadershipImages.mostafa.imageUrl} alt={leadershipImages.mostafa.description} data-ai-hint={leadershipImages.mostafa.imageHint} />
                                         <AvatarFallback>MK</AvatarFallback>
                                     </Avatar>
-                                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
-                                        <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                        <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                                     </div>
                                 </div>
                             </DialogTrigger>
@@ -58,8 +58,8 @@ export default function LeadershipSection() {
                                             <AvatarImage src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} data-ai-hint={leadershipImages.islam.imageHint}/>
                                             <AvatarFallback>IF</AvatarFallback>
                                         </Avatar>
-                                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
-                                            <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                            <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     </div>
                                 </DialogTrigger>
@@ -105,8 +105,8 @@ export default function LeadershipSection() {
                                                 <AvatarImage src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} data-ai-hint={leadershipImages.reem.imageHint}/>
                                                 <AvatarFallback>RM</AvatarFallback>
                                             </Avatar>
-                                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
-                                                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
+                                            <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                                <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
                                             </div>
                                         </div>
                                     </DialogTrigger>
@@ -154,8 +154,8 @@ export default function LeadershipSection() {
                                                 <AvatarImage src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} data-ai-hint={leadershipImages.ahmed.imageHint}/>
                                                 <AvatarFallback>AH</AvatarFallback>
                                             </Avatar>
-                                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
-                                                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
+                                            <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                                <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
                                             </div>
                                         </div>
                                     </DialogTrigger>
@@ -204,8 +204,8 @@ export default function LeadershipSection() {
                                             <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
                                             <AvatarFallback>HI</AvatarFallback>
                                         </Avatar>
-                                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
-                                            <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                            <ZoomIn className="text-white opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
                                     </div>
                                 </DialogTrigger>
@@ -233,3 +233,5 @@ export default function LeadershipSection() {
         </section>
     );
 }
+
+    
