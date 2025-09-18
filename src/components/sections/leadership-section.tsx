@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 export default function LeadershipSection() {
     const [isIslamExpanded, setIsIslamExpanded] = useState(false);
     const [isReemExpanded, setIsReemExpanded] = useState(false);
-    const [isAhmedExpanded, setIsAhmedExpanded].useState(false);
+    const [isAhmedExpanded, setIsAhmedExpanded] = useState(false);
     const [isHaninExpanded, setIsHaninExpanded] = useState(false);
 
     const leadershipImages = {
