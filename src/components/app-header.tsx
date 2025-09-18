@@ -38,7 +38,7 @@ export default function AppHeader() {
         <div className="text-lg md:text-xl font-bold text-gray-800">لجنة التنظيم والمراسم</div>
         <div className="hidden md:flex space-x-8 space-x-reverse items-center">
           {navItems.map(item => (
-            <a key={item.href} href={item.href} className={`nav-link text-sm lg:text-base ${activeSection === item.href.substring(1) ? 'active-nav' : ''}`}>
+            <a key={item.href} href={item.href} className={`nav-link font-semibold text-sm lg:text-base ${activeSection === item.href.substring(1) ? 'active-nav' : ''}`}>
               {item.label}
             </a>
           ))}
@@ -54,7 +54,7 @@ export default function AppHeader() {
           <a 
             key={item.href} 
             href={item.href} 
-            className="block py-3 px-4 text-base text-center hover:bg-gray-100 transition-colors"
+            className="block py-3 px-4 text-base text-center font-semibold hover:bg-gray-100 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             {item.label}
