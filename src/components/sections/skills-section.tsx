@@ -104,7 +104,7 @@ export default function SkillsSection() {
         <section id="skills" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">المهارات والصفات التفصيلية لعضو التنظيم</h2>
             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
-                النجاح في مجال التنظيم لا يعتمد فقط على الخطط والإجراءات، بل بشكل أساسي على مهارات وصفات أعضاء الفريق. في هذا القسم، نستعرض المهارات الأساسية والصفات الشخصية التي نعتبرها حجر الزاوية لكل منظم ناجح.
+                يعتمد نجاح التنظيم على مهارات وصفات أعضاء الفريق. نستعرض هنا المهارات والصفات الأساسية لكل منظم ناجح.
             </p>
             <CustomAccordion items={skillsAccordionItems} />
 
