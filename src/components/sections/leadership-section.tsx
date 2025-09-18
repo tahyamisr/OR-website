@@ -81,8 +81,8 @@ export default function LeadershipSection() {
                                 </div>
                             </div>
                         </div>
-                        <div className={`flex-grow transition-all duration-500 ease-in-out overflow-hidden ${isReemExpanded ? 'max-h-screen' : 'max-h-20 sm:max-h-24'}`}>
-                            <p className="text-sm md:text-base leading-relaxed">
+                        <div className={`flex-grow transition-all duration-500 ease-in-out overflow-hidden ${isReemExpanded ? 'max-h-screen' : 'max-h-0'}`}>
+                            <p className="text-sm md:text-base leading-relaxed pt-4 border-t mt-4">
                             بدأت رحلتها في الاتحاد من يوم 6/10/2022 وقدرت تثبت نفسها كقيادة شابة عندها إصرار وحب للتجربة. تشغل منصب نائب رئيس اللجنة المركزية للتنظيم، وكمان كانت رئيس اتحاد المعهد العالي للغات 6 أكتوبر للعام الدراسي 2024/2025. معروفة إنها شخصية قيادية، محترمة، منظمة لوقتها، وعندها مهارات تواصل عالية. دلوقتي ريم بتشتغل في Call Center Agency، وده زوّد خبرتها العملية في التعامل مع الناس، إدارة المواقف المختلفة، والمرونة تحت الضغط. ريم مثال حي للشباب الطموح اللي بيقدر يحول أي تحدي لفرصة نجاح.
                             </p>
                         </div>
