@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from "react";
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AppHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +37,16 @@ export default function AppHeader() {
   return (
     <header id="header" className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-        <div className="text-lg md:text-xl font-bold text-gray-800">لجنة التنظيم والمراسم</div>
+        <a href="#home" className="flex items-center gap-3">
+          <Image 
+            src="https://www.dropbox.com/scl/fi/cdpfbk7nlzbn5mb13nmbt/.jpg?rlkey=5gaov2yymvxp4isbw9crxiuza&raw=1"
+            alt="شعار لجنة التنظيم والمراسم"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+          <div className="text-base md:text-lg font-bold text-gray-800">لجنة التنظيم والمراسم</div>
+        </a>
         <div className="hidden md:flex space-x-8 space-x-reverse items-center">
           {navItems.map(item => (
             <a key={item.href} href={item.href} className={`nav-link font-semibold text-sm lg:text-base ${activeSection === item.href.substring(1) ? 'active-nav' : ''}`}>
