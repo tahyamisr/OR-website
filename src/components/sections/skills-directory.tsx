@@ -2,15 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BrainCircuit, HeartHandshake, Puzzle, MessageSquare, Clock, Star } from "lucide-react";
 
 const skills = [
-  { name: "Communication", icon: MessageSquare },
-  { name: "Problem-Solving", icon: Puzzle },
-  { name: "Time Management", icon: Clock },
+  { name: "التواصل", icon: MessageSquare },
+  { name: "حل المشكلات", icon: Puzzle },
+  { name: "إدارة الوقت", icon: Clock },
 ];
 
 const qualities = [
-  { name: "Patience", icon: HeartHandshake },
-  { name: "Adaptability", icon: Star },
-  { name: "Integrity", icon: BrainCircuit },
+  { name: "الصبر", icon: HeartHandshake },
+  { name: "القدرة على التكيف", icon: Star },
+  { name: "النزاهة", icon: BrainCircuit },
 ];
 
 export default function SkillsDirectory() {
@@ -18,10 +18,10 @@ export default function SkillsDirectory() {
     <section id="skills" className="space-y-12">
       <div className="text-center space-y-2">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-headline text-primary">
-          Member Skills & Qualities
+          مهارات وصفات الأعضاء
         </h2>
         <p className="text-muted-foreground md:text-xl/relaxed max-w-3xl mx-auto">
-          The essential skills and personal qualities that define our committee members.
+          المهارات الأساسية والصفات الشخصية التي تميز أعضاء لجنتنا.
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -29,7 +29,7 @@ export default function SkillsDirectory() {
           <CardHeader>
             <CardTitle className="font-headline text-xl flex items-center gap-2">
               <BrainCircuit className="h-6 w-6 text-accent" />
-              Essential Skills
+              المهارات الأساسية
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -47,7 +47,7 @@ export default function SkillsDirectory() {
           <CardHeader>
             <CardTitle className="font-headline text-xl flex items-center gap-2">
               <HeartHandshake className="h-6 w-6 text-accent" />
-              Personal Qualities
+              الصفات الشخصية
             </CardTitle>
           </CardHeader>
           <CardContent>

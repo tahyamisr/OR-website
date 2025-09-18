@@ -4,18 +4,18 @@ import { Bot, ArrowUpRight, CheckSquare, Mail } from "lucide-react";
 
 const services = [
   {
-    title: "'Tahya Misr' Invitation Bot",
-    description: "Generate and manage event invitations seamlessly with our dedicated Telegram bot.",
+    title: "بوت دعوات 'تحيا مصر'",
+    description: "أنشئ وأدر دعوات الفعاليات بسلاسة مع بوت التليجرام المخصص لدينا.",
     icon: Mail,
     link: "https://t.me/invite_tahyamisrbot",
-    cta: "Open Invitation Bot",
+    cta: "افتح بوت الدعوات",
   },
   {
-    title: "Attendance & Certificate Bot",
-    description: "Register attendance and receive digital participation certificates instantly.",
+    title: "بوت الحضور والشهادات",
+    description: "سجل حضورك واحصل على شهادات المشاركة الرقمية على الفور.",
     icon: CheckSquare,
     link: "https://t.me/certificate_tahyamisr1bot",
-    cta: "Open Certificate Bot",
+    cta: "افتح بوت الشهادات",
   },
 ];
 
@@ -24,10 +24,10 @@ export default function DigitalServicesHub() {
     <section id="digital-services" className="space-y-12">
       <div className="text-center space-y-2">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-headline text-primary">
-          Digital Services Hub
+          مركز الخدمات الرقمية
         </h2>
         <p className="text-muted-foreground md:text-xl/relaxed max-w-3xl mx-auto">
-          Access our suite of digital tools designed to streamline event management and participation.
+          استفد من مجموعة أدواتنا الرقمية المصممة لتبسيط إدارة الفعاليات والمشاركة فيها.
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

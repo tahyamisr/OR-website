@@ -15,16 +15,16 @@ export default function OrganizationalStructure() {
     <section id="structure" className="space-y-12">
       <div className="text-center space-y-2">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-headline text-primary">
-          Organizational Structure
+          الهيكل التنظيمي
         </h2>
         <p className="text-muted-foreground md:text-xl/relaxed max-w-3xl mx-auto">
-          A visual representation of our committee's hierarchy and leadership roles.
+          تمثيل مرئي للتسلسل الهرمي للجنة وأدوار القيادة لدينا.
         </p>
       </div>
       <div className="flex flex-col items-center w-full overflow-x-auto py-4">
         <div className="flex flex-col items-center" style={{ minWidth: '700px' }}>
           {/* Top Level Node */}
-          <StructureNode name="Islam Fares" role="Head of Central Committee" />
+          <StructureNode name="إسلام فارس" role="رئيس اللجنة المركزية" />
 
           {/* Vertical connector */}
           <div className="w-px h-12 bg-border my-4" />
@@ -40,17 +40,17 @@ export default function OrganizationalStructure() {
             {/* Sub-node 1 */}
             <div className="flex flex-col items-center">
               <div className="w-px h-8 bg-border" />
-              <StructureNode name="Reem Mansour" role="Deputy Head" />
+              <StructureNode name="ريم منصور" role="نائب الرئيس" />
             </div>
             {/* Sub-node 2 */}
             <div className="flex flex-col items-center">
               <div className="w-px h-8 bg-border" />
-              <StructureNode name="Ahmed Hassan" role="Head of Logistics" />
+              <StructureNode name="أحمد حسن" role="رئيس الخدمات اللوجستية" />
             </div>
             {/* Sub-node 3 */}
             <div className="flex flex-col items-center">
               <div className="w-px h-8 bg-border" />
-              <StructureNode name="Hanin Islam" role="Head of Digital Services" />
+              <StructureNode name="حنين إسلام" role="رئيسة الخدمات الرقمية" />
             </div>
           </div>
         </div>

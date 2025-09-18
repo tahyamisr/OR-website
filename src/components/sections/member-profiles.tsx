@@ -7,27 +7,27 @@ import { Badge } from "@/components/ui/badge";
 const members = [
   {
     id: "islam-fares",
-    name: "Islam Fares",
-    role: "Head of Central Committee",
-    description: "Leads the overall strategy and vision of the committee, ensuring all operations align with our mission.",
+    name: "إسلام فارس",
+    role: "رئيس اللجنة المركزية",
+    description: "يقود الاستراتيجية والرؤية العامة للجنة، ويضمن توافق جميع العمليات مع مهمتنا.",
   },
   {
     id: "reem-mansour",
-    name: "Reem Mansour",
-    role: "Deputy Head",
-    description: "Supports the Head of Committee and oversees inter-departmental coordination and special projects.",
+    name: "ريم منصور",
+    role: "نائب الرئيس",
+    description: "تدعم رئيس اللجنة وتشرف على التنسيق بين الإدارات والمشاريع الخاصة.",
   },
   {
     id: "ahmed-hassan",
-    name: "Ahmed Hassan",
-    role: "Head of Logistics",
-    description: "Manages all logistical aspects of events, from venue planning to on-site execution.",
+    name: "أحمد حسن",
+    role: "رئيس الخدمات اللوجستية",
+    description: "يدير جميع الجوانب اللوجستية للفعاليات، من تخطيط الأماكن إلى التنفيذ في الموقع.",
   },
   {
     id: "hanin-islam",
-    name: "Hanin Islam",
-    role: "Head of Digital Services",
-    description: "Oversees the development and maintenance of all digital platforms and services.",
+    name: "حنين إسلام",
+    role: "رئيسة الخدمات الرقمية",
+    description: "تشرف على تطوير وصيانة جميع المنصات والخدمات الرقمية.",
   },
 ];
 
@@ -40,10 +40,10 @@ export default function MemberProfiles() {
     <section id="members" className="space-y-12">
       <div className="text-center space-y-2">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-headline text-primary">
-          Meet the Committee
+          تعرف على اللجنة
         </h2>
         <p className="text-muted-foreground md:text-xl/relaxed max-w-3xl mx-auto">
-          Our dedicated leadership team driving the committee's initiatives and success.
+          فريق قيادتنا المتفاني الذي يقود مبادرات ونجاح اللجنة.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

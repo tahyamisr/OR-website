@@ -8,7 +8,7 @@ export default function AppFooter() {
       <Separator />
       <div className="container mx-auto px-4 py-6">
         <p className="text-center text-sm text-muted-foreground">
-          © {currentYear} Central Committee Connect. All rights reserved.
+          © {currentYear} تواصل اللجنة المركزية. جميع الحقوق محفوظة.
         </p>
       </div>
     </footer>

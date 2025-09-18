@@ -10,11 +10,11 @@ export default function AppHeader() {
           <div className="flex items-center gap-2">
             <Briefcase className="h-6 w-6 text-primary" />
             <h1 className="text-xl font-bold font-headline text-foreground">
-              Central Committee Connect
+              تواصل اللجنة المركزية
             </h1>
           </div>
           <Button variant="outline" className="hidden sm:flex">
-            Contact Us
+            تواصل معنا
           </Button>
         </div>
       </div>

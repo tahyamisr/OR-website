@@ -6,10 +6,10 @@ export default function CommitteeOverview() {
     <section id="overview" className="space-y-12">
       <div className="text-center space-y-2">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-headline text-primary">
-          About the Central Committee
+          حول اللجنة المركزية
         </h2>
         <p className="text-muted-foreground md:text-xl/relaxed max-w-3xl mx-auto">
-          Learn about our core mission, foundational history, and organizational structure that drives our success.
+          تعرف على مهمتنا الأساسية وتاريخنا التأسيسي والهيكل التنظيمي الذي يدفع نجاحنا.
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
@@ -18,11 +18,11 @@ export default function CommitteeOverview() {
             <div className="bg-primary/10 p-3 rounded-full">
               <Target className="h-6 w-6 text-primary" />
             </div>
-            <CardTitle className="font-headline text-xl">Our Mission</CardTitle>
+            <CardTitle className="font-headline text-xl">مهمتنا</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              To empower communities through strategic organization, effective event execution, and fostering a culture of leadership and collaboration. We aim to be the backbone of impactful initiatives.
+              تمكين المجتمعات من خلال التنظيم الاستراتيجي والتنفيذ الفعال للفعاليات وتعزيز ثقافة القيادة والتعاون. نهدف إلى أن نكون العمود الفقري للمبادرات المؤثرة.
             </p>
           </CardContent>
         </Card>
@@ -31,11 +31,11 @@ export default function CommitteeOverview() {
             <div className="bg-primary/10 p-3 rounded-full">
               <History className="h-6 w-6 text-primary" />
             </div>
-            <CardTitle className="font-headline text-xl">Our History</CardTitle>
+            <CardTitle className="font-headline text-xl">تاريخنا</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              Founded on principles of integrity and service, our committee has grown from a small group of visionaries to a nationwide network dedicated to organizing and supporting key events and programs.
+              تأسست لجنتنا على مبادئ النزاهة والخدمة، وقد نمت من مجموعة صغيرة من أصحاب الرؤى إلى شبكة على مستوى الدولة مكرسة لتنظيم ودعم الفعاليات والبرامج الرئيسية.
             </p>
           </CardContent>
         </Card>
@@ -44,11 +44,11 @@ export default function CommitteeOverview() {
             <div className="bg-primary/10 p-3 rounded-full">
               <Landmark className="h-6 w-6 text-primary" />
             </div>
-            <CardTitle className="font-headline text-xl">Our Structure</CardTitle>
+            <CardTitle className="font-headline text-xl">هيكلنا التنظيمي</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              Our committee is organized into specialized sub-committees, each led by experienced members, ensuring efficient management of logistics, digital services, and member coordination.
+              يتم تنظيم لجنتنا في لجان فرعية متخصصة، يقود كل منها أعضاء من ذوي الخبرة، مما يضمن الإدارة الفعالة للخدمات اللوجستية والخدمات الرقمية وتنسيق الأعضاء.
             </p>
           </CardContent>
         </Card>
