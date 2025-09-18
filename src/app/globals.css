@@ -31,7 +31,7 @@
     --accent: 43 53% 57%;
     --accent-foreground: 180 25% 25%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 51%; /* Was 0 84.2% 60.2% */
     --destructive-foreground: 0 0% 98%;
 
     --border: 45 33% 92%; /* #EAEAEA */
