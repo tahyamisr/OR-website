@@ -10,12 +10,32 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
       <AppHeader />
-      <main className="container mx-auto px-4 sm:px-6 py-12">
-        <HomeSection />
-        <LeadershipSection />
-        <OrganizationTypesSection />
-        <SkillsSection />
-        <DigitalServicesSection />
+      <main>
+        <div className="bg-background">
+          <div className="container mx-auto px-4 sm:px-6 py-12">
+            <HomeSection />
+          </div>
+        </div>
+        <div className="bg-secondary">
+          <div className="container mx-auto px-4 sm:px-6 py-12">
+            <LeadershipSection />
+          </div>
+        </div>
+        <div className="bg-background">
+          <div className="container mx-auto px-4 sm:px-6 py-12">
+            <OrganizationTypesSection />
+          </div>
+        </div>
+        <div className="bg-secondary">
+          <div className="container mx-auto px-4 sm:px-6 py-12">
+            <SkillsSection />
+          </div>
+        </div>
+        <div className="bg-background">
+          <div className="container mx-auto px-4 sm:px-6 py-12">
+            <DigitalServicesSection />
+          </div>
+        </div>
       </main>
       <AppFooter />
     </div>
