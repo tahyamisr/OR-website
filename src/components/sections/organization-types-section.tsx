@@ -360,9 +360,13 @@ export default function OrganizationTypesSection() {
     return (
         <section id="organization-types" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">أنواع التنظيم</h2>
-            <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
-                ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته: التنظيم الميداني للفعاليات على أرض الواقع، والتنظيم الرقمي للفعاليات عبر الإنترنت. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة.
-            </p>
+             <div className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
+                <p className="mb-4">ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة:</p>
+                <ul className="list-none inline-block text-center space-y-2">
+                    <li><span className="font-bold">🎪 التنظيم الميداني:</span> للفعاليات على أرض الواقع.</li>
+                    <li><span className="font-bold">💻 التنظيم الرقمي:</span> للفعاليات عبر الإنترنت.</li>
+                </ul>
+            </div>
              <CustomAccordion items={mainOrganizationTypes} type="multiple" />
              <div className="mt-12">
                 <CustomAccordion items={eventGoalsItems} type="multiple" />
