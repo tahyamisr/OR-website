@@ -92,7 +92,7 @@
       background-color: hsl(var(--card-custom));
       border: 1px solid hsl(var(--border));
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  }
+   }
   .accordion-trigger-custom:hover {
     background-color: hsl(var(--secondary));
   }
