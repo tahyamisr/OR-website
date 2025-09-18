@@ -1,8 +1,13 @@
+'use client';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function LeadershipSection() {
+    const [isExpanded, setIsExpanded] = useState(false);
     const leadershipImages = {
         islam: PlaceHolderImages.find(p => p.id === 'islam-fares'),
         reem: PlaceHolderImages.find(p => p.id === 'reem-mansour'),
@@ -40,12 +45,20 @@ export default function LeadershipSection() {
                              </div>
                         </div>
                     </div>
-                     <div className="mt-4 pt-4 border-t text-base leading-relaxed space-y-3">
-                         <p>المهندس إسلام فارس عبد الجليل، ابن محافظة الجيزة، قائد شاب في عمر الخامسة والعشرين، ورئيس اللجنة المركزية للتنظيم باتحاد طلاب تحيا مصر. بخطوات واثقة، وبفكر هندسي مدني راقي، أثبت إن القيادة مش منصب، دي مسؤولية وروح.</p>
-                         <p>إسلام بيقود فريق كبير بروح واحدة، بيعرف يوزّع المهام بدقة، ويحط الجداول الزمنية بحكمة، ويدير الوقت كأنه كنز. في المواقف الحرجة بياخد القرار بسرعة وبثبات، وفي لحظات التحدي بيفكر بطريقة مختلفة ويبدع في الحلول.</p>
-                         <p>هو بطبعه محفّز، بيزرع في فريقه الحماس، ويدفعهم يشتغلوا كإنهم قلب واحد. عنده مهارات تفاوض وإقناع، وبيعرف يبني علاقات قوية مع كل اللجان، بيجمع بين قوة الشخصية ولباقة الأسلوب ومرونة التعامل.</p>
-                         <p>التزامه وانضباطه سر نجاحه، وتحليله العميق وإبداعه طريقته عشان يقدّم فعاليات مختلفة ومميزة. قائد مؤمن إن التنظيم فن، وإن الشغل الجماعي هو أقصر طريق للنجاح.</p>
-                     </div>
+                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-screen' : 'max-h-0'}`}>
+                         <div className="mt-4 pt-4 border-t text-base leading-relaxed space-y-3">
+                             <p>المهندس إسلام فارس عبد الجليل، ابن محافظة الجيزة، قائد شاب في عمر الخامسة والعشرين، ورئيس اللجنة المركزية للتنظيم باتحاد طلاب تحيا مصر. بخطوات واثقة، وبفكر هندسي مدني راقي، أثبت إن القيادة مش منصب، دي مسؤولية وروح.</p>
+                             <p>إسلام بيقود فريق كبير بروح واحدة، بيعرف يوزّع المهام بدقة، ويحط الجداول الزمنية بحكمة، ويدير الوقت كأنه كنز. في المواقف الحرجة بياخد القرار بسرعة وبثبات، وفي لحظات التحدي بيفكر بطريقة مختلفة ويبدع في الحلول.</p>
+                             <p>هو بطبعه محفّز، بيزرع في فريقه الحماس، ويدفعهم يشتغلوا كإنهم قلب واحد. عنده مهارات تفاوض وإقناع، وبيعرف يبني علاقات قوية مع كل اللجان، بيجمع بين قوة الشخصية ولباقة الأسلوب ومرونة التعامل.</p>
+                             <p>التزامه وانضباطه سر نجاحه، وتحليله العميق وإبداعه طريقته عشان يقدّم فعاليات مختلفة ومميزة. قائد مؤمن إن التنظيم فن، وإن الشغل الجماعي هو أقصر طريق للنجاح.</p>
+                         </div>
+                    </div>
+                    <div className="flex justify-center mt-4">
+                        <Button onClick={() => setIsExpanded(!isExpanded)} variant="outline" className="w-full md:w-auto">
+                            {isExpanded ? 'عرض أقل' : 'اقرأ المزيد'}
+                            {isExpanded ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                        </Button>
+                    </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
