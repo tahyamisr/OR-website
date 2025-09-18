@@ -17,7 +17,7 @@ export default function DigitalServicesSection() {
                 <div className="card-custom p-6 rounded-lg">
                     <h3 className="text-xl font-bold mb-2">نموذج ذكاء اصطناعى (Al)</h3>
                     <p>وكيل ذكي يرد على الاستفسارات، ينظم البيانات، ويتعامل باللهجة المصرية.</p>
-                    <a href="http://ai.tahyamisrsu.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">الموقع الرسمي</a> |
+                    <a href="https://ai.tahyamisrsu.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">الموقع الرسمي</a> |
                     <a href="https://t.me/tahyamisrbot" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">بوت تيليجرام</a>
                 </div>
                  <div className="card-custom p-6 rounded-lg">
@@ -32,7 +32,7 @@ export default function DigitalServicesSection() {
                 </div>
                  <div className="card-custom p-6 rounded-lg">
                     <h3 className="text-xl font-bold mb-2">نظام تهنئة بأعياد الميلاد</h3>
-                    <p>نظام ذكي يُرسل تهنئات تلقائية بعيد الميلاد للمستخدمين بأسلوب شخصي وإنساني.</p>
+                    <p>نظام ذكي يُرسل تهنئات تلقائية بعيد الميلاد للمستخدمين بأسلوب شخصي وإنساني عبر البريد الإلكتروني ورقم الهاتف.</p>
                 </div>
              </div>
         </section>
