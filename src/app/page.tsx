@@ -5,6 +5,7 @@ import LeadershipSection from '@/components/sections/leadership-section';
 import OrganizationTypesSection from '@/components/sections/organization-types-section';
 import SkillsSection from '@/components/sections/skills-section';
 import DigitalServicesSection from '@/components/sections/digital-services-section';
+import PlatformComparisonSection from '@/components/sections/platform-comparison-section';
 
 export default function Home() {
   return (
@@ -28,10 +29,15 @@ export default function Home() {
         </div>
         <div className="bg-secondary">
           <div className="container mx-auto px-4 sm:px-6 py-12">
-            <SkillsSection />
+            <PlatformComparisonSection />
           </div>
         </div>
         <div className="bg-background">
+          <div className="container mx-auto px-4 sm:px-6 py-12">
+            <SkillsSection />
+          </div>
+        </div>
+        <div className="bg-secondary">
           <div className="container mx-auto px-4 sm:px-6 py-12">
             <DigitalServicesSection />
           </div>

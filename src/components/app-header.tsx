@@ -10,6 +10,7 @@ export default function AppHeader() {
     { href: '#home', label: 'الرئيسية' },
     { href: '#leadership', label: 'الهيكل التنظيمي' },
     { href: '#organization-types', label: 'أنواع التنظيم' },
+    { href: '#platforms', label: 'المنصات الرقمية' },
     { href: '#skills', label: 'مهارات المنظم' },
     { href: '#services', label: 'الخدمات الرقمية' },
   ];
