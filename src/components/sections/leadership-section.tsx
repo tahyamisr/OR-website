@@ -82,9 +82,16 @@ export default function LeadershipSection() {
                             </div>
                         </div>
                         <div className={`flex-grow transition-all duration-500 ease-in-out overflow-hidden ${isReemExpanded ? 'max-h-screen' : 'max-h-0'}`}>
-                            <p className="text-sm md:text-base leading-relaxed pt-4 border-t mt-4">
-                            بدأت رحلتها في الاتحاد من يوم 6/10/2022 وقدرت تثبت نفسها كقيادة شابة عندها إصرار وحب للتجربة. تشغل منصب نائب رئيس اللجنة المركزية للتنظيم، وكمان كانت رئيس اتحاد المعهد العالي للغات 6 أكتوبر للعام الدراسي 2024/2025. معروفة إنها شخصية قيادية، محترمة، منظمة لوقتها، وعندها مهارات تواصل عالية. دلوقتي ريم بتشتغل في Call Center Agency، وده زوّد خبرتها العملية في التعامل مع الناس، إدارة المواقف المختلفة، والمرونة تحت الضغط. ريم مثال حي للشباب الطموح اللي بيقدر يحول أي تحدي لفرصة نجاح.
-                            </p>
+                             <div className="text-sm md:text-base leading-relaxed pt-4 border-t mt-4">
+                                <p>ريم مثال حي للشباب الطموح اللي بيقدر يحول أي تحدي لفرصة نجاح. من أبرز إنجازاتها ومسؤولياتها:</p>
+                                <ul className="list-disc list-inside space-y-2 mt-2">
+                                    <li>بدأت رحلتها في الاتحاد من 6/10/2022، وأثبتت نفسها كقائدة شابة بإصرار وحب للتجربة.</li>
+                                    <li>تشغل منصب نائب رئيس اللجنة المركزية للتنظيم.</li>
+                                    <li>شغلت منصب رئيس اتحاد المعهد العالي للغات 6 أكتوبر للعام الدراسي 2024/2025.</li>
+                                    <li>تُعرف بشخصيتها القيادية، احترامها، وتنظيمها لوقتها، مع مهارات تواصل عالية.</li>
+                                    <li>تعمل حاليًا في وكالة مركز اتصال (Call Center Agency)، مما زاد من خبرتها العملية في التعامل مع الجمهور، إدارة المواقف، والمرونة تحت الضغط.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="flex justify-center mt-4">
                             <Button onClick={() => setIsReemExpanded(!isReemExpanded)} variant="outline" className="w-full md:w-auto">
