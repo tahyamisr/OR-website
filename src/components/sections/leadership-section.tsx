@@ -33,6 +33,7 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 export default function LeadershipSection() {
+    const [isMostafaExpanded, setIsMostafaExpanded] = useState(false);
     const [isIslamExpanded, setIsIslamExpanded] = useState(false);
     const [isReemExpanded, setIsReemExpanded] = useState(false);
     const [isAhmedExpanded, setIsAhmedExpanded] = useState(false);
@@ -71,7 +72,14 @@ export default function LeadershipSection() {
                     )}
                      <h3 className="text-xl md:text-2xl font-bold text-black">أ. مصطفي قطامش</h3>
                      <p className="text-base md:text-lg text-muted-foreground">رئيس اتحاد طلاب تحيا مصر</p>
+                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isMostafaExpanded ? 'max-h-screen' : 'max-h-0'}`}>
+                        <p className="mt-4 pt-4 border-t text-sm md:text-base leading-relaxed">الأستاذ مصطفى قطامش، قائد ملهم برؤية واضحة، يجمع بين الحكمة والشغف في قيادة اتحاد طلاب تحيا مصر. يتميز بقدرته على تحفيز الشباب، وخلق بيئة إيجابية تشجع على الإبداع والعمل الجماعي. يعمل دائمًا على تمكين الطلاب وتطوير مهاراتهم، مؤمنًا بأنهم قادة المستقبل. إدارته للاتحاد تتسم بالشفافية والحرص على تحقيق أهداف الاتحاد لخدمة الطلاب والمجتمع.</p>
+                    </div>
                      <div className="flex justify-center flex-wrap gap-2 mt-4">
+                        <Button onClick={() => setIsMostafaExpanded(!isMostafaExpanded)} variant="outline" className="flex-grow md:flex-grow-0">
+                            {isMostafaExpanded ? 'عرض أقل' : 'اقرأ المزيد'}
+                            {isMostafaExpanded ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                        </Button>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" className="flex-grow md:flex-grow-0">
