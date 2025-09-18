@@ -111,22 +111,22 @@ export default function SkillsSection() {
             <div className="space-y-12">
                 <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">المهارات الأساسية (Core Skills) 🛠️</h3>
-                    <CustomAccordion items={coreSkillsItems} type="multiple" collapsible="true" />
+                    <CustomAccordion items={coreSkillsItems} type="multiple" />
                 </div>
 
                 <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">الصفات الشخصية (Personal Attributes) 😊</h3>
-                    <CustomAccordion items={personalAttributesItems} type="multiple" collapsible="true" />
+                    <CustomAccordion items={personalAttributesItems} type="multiple" />
                 </div>
 
                 <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">مفاهيم قيادية وإدارية 🧭</h3>
-                     <CustomAccordion items={leadershipConceptsItems} type="multiple" collapsible="true" />
+                     <CustomAccordion items={leadershipConceptsItems} type="multiple" />
                 </div>
                 
                 <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">الفوائد والأخطاء الشائعة</h3>
-                    <CustomAccordion items={benefitsAccordionItems} type="multiple" collapsible="true" />
+                    <CustomAccordion items={benefitsAccordionItems} type="multiple" />
                 </div>
             </div>
         </section>

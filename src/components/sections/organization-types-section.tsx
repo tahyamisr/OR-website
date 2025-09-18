@@ -223,7 +223,7 @@ export default function OrganizationTypesSection() {
             </Tabs>
 
             <div className="mt-12">
-                <CustomAccordion items={eventGoalsItems} type="multiple" collapsible="true" />
+                <CustomAccordion items={eventGoalsItems} type="multiple" />
             </div>
         </section>
     );

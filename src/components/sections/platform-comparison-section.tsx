@@ -118,7 +118,7 @@ export default function PlatformComparisonSection() {
         <section id="platforms" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-black">مقارنة بين أشهر المنصات الرقمية (النسخ المجانية)</h2>
             <div className="mb-12">
-                 <CustomAccordion items={platformDetails} type="multiple" collapsible="true" />
+                 <CustomAccordion items={platformDetails} type="multiple" />
             </div>
         </section>
     );
