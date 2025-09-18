@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function LeadershipSection() {
     const [isIslamExpanded, setIsIslamExpanded] = useState(false);
@@ -31,10 +32,17 @@ export default function LeadershipSection() {
                  <div className="card-custom p-6 rounded-lg col-span-full">
                     <div className="flex flex-col md:flex-row items-center gap-6">
                         {leadershipImages.islam && (
-                            <Avatar className="w-24 h-24 md:w-32 md:h-32 border-4 border-accent">
-                                <AvatarImage src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} data-ai-hint={leadershipImages.islam.imageHint}/>
-                                <AvatarFallback>IF</AvatarFallback>
-                            </Avatar>
+                             <Dialog>
+                                <DialogTrigger asChild>
+                                    <Avatar className="w-24 h-24 md:w-32 md:h-32 border-4 border-accent cursor-pointer">
+                                        <AvatarImage src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} data-ai-hint={leadershipImages.islam.imageHint}/>
+                                        <AvatarFallback>IF</AvatarFallback>
+                                    </Avatar>
+                                </DialogTrigger>
+                                <DialogContent className="p-0 border-0 max-w-fit">
+                                    <Image src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} width={600} height={600} className="rounded-lg" />
+                                </DialogContent>
+                            </Dialog>
                         )}
                         <div className="text-center md:text-right flex-1">
                              <h3 className="text-xl md:text-2xl font-bold">مهندس. اسلام فارس عبد الجليل</h3>
@@ -66,10 +74,17 @@ export default function LeadershipSection() {
                     <div className="card-custom p-6 rounded-lg flex flex-col">
                         <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
                              {leadershipImages.reem && (
-                                <Avatar className="w-20 h-20 border-2 border-accent">
-                                    <AvatarImage src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} data-ai-hint={leadershipImages.reem.imageHint}/>
-                                    <AvatarFallback>RM</AvatarFallback>
-                                </Avatar>
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Avatar className="w-20 h-20 border-2 border-accent cursor-pointer">
+                                            <AvatarImage src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} data-ai-hint={leadershipImages.reem.imageHint}/>
+                                            <AvatarFallback>RM</AvatarFallback>
+                                        </Avatar>
+                                    </DialogTrigger>
+                                    <DialogContent className="p-0 border-0 max-w-fit">
+                                        <Image src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} width={600} height={600} className="rounded-lg" />
+                                    </DialogContent>
+                                </Dialog>
                             )}
                             <div className="text-center sm:text-right flex-1">
                                 <h3 className="text-lg md:text-xl font-bold">ريـــم مـنصــــور الــفقــي</h3>
@@ -103,10 +118,17 @@ export default function LeadershipSection() {
                      <div className="card-custom p-6 rounded-lg flex flex-col">
                         <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
                             {leadershipImages.ahmed && (
-                                <Avatar className="w-20 h-20 border-2 border-accent">
-                                    <AvatarImage src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} data-ai-hint={leadershipImages.ahmed.imageHint}/>
-                                    <AvatarFallback>AH</AvatarFallback>
-                                </Avatar>
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <Avatar className="w-20 h-20 border-2 border-accent cursor-pointer">
+                                            <AvatarImage src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} data-ai-hint={leadershipImages.ahmed.imageHint}/>
+                                            <AvatarFallback>AH</AvatarFallback>
+                                        </Avatar>
+                                    </DialogTrigger>
+                                    <DialogContent className="p-0 border-0 max-w-fit">
+                                        <Image src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} width={600} height={600} className="rounded-lg" />
+                                    </DialogContent>
+                                </Dialog>
                             )}
                             <div className="text-center sm:text-right flex-1">
                                 <h3 className="text-lg md:text-xl font-bold">احمد حسن عبدالرحيم</h3>
@@ -141,10 +163,17 @@ export default function LeadershipSection() {
                  <div className="card-custom p-6 rounded-lg col-span-full">
                     <div className="flex flex-col items-center gap-4">
                         {leadershipImages.hanin && (
-                             <Avatar className="w-24 h-24 border-4 border-accent">
-                                <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
-                                <AvatarFallback>HI</AvatarFallback>
-                            </Avatar>
+                             <Dialog>
+                                <DialogTrigger asChild>
+                                    <Avatar className="w-24 h-24 border-4 border-accent cursor-pointer">
+                                        <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
+                                        <AvatarFallback>HI</AvatarFallback>
+                                    </Avatar>
+                                </DialogTrigger>
+                                <DialogContent className="p-0 border-0 max-w-fit">
+                                    <Image src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} width={600} height={600} className="rounded-lg" />
+                                </DialogContent>
+                            </Dialog>
                         )}
                         <div className="text-center">
                             <h3 className="text-lg md:text-xl font-bold">حـنيـن اســلام مـبـــروك</h3>
