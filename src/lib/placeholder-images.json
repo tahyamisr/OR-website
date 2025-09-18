@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "mostafa-katamesh",
+      "description": "أ. مصطفى قطامش, رئيس اتحاد طلاب تحيا مصر",
+      "imageUrl": "https://picsum.photos/seed/5/400/400",
+      "imageHint": "man portrait"
+    },
+    {
       "id": "islam-fares",
       "description": "إسلام فارس، رئيس اللجنة المركزية",
       "imageUrl": "https://www.dropbox.com/scl/fi/d7bxq2cpbe8vi7yqte2m7/.png?rlkey=ct4wilcas6bnlfwsvr5a3clol&raw=1",

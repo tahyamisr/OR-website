@@ -14,6 +14,7 @@ export default function LeadershipSection() {
     const [isHaninExpanded, setIsHaninExpanded] = useState(false);
 
     const leadershipImages = {
+        mostafa: PlaceHolderImages.find(p => p.id === 'mostafa-katamesh'),
         islam: PlaceHolderImages.find(p => p.id === 'islam-fares'),
         reem: PlaceHolderImages.find(p => p.id === 'reem-mansour'),
         ahmed: PlaceHolderImages.find(p => p.id === 'ahmed-hassan'),
@@ -24,7 +25,25 @@ export default function LeadershipSection() {
         <section id="leadership" className="scroll-mt-24">
             <h2 className="text-xl md:text-2xl font-bold mb-8 text-center">الهيكل التنظيمي للجنة المركزية 🏛️</h2>
             <div className="grid grid-cols-1 gap-8">
-                <div className="card-custom p-6 rounded-lg text-center">
+                <div className="card-custom p-6 rounded-lg text-center flex flex-col items-center">
+                    {leadershipImages.mostafa && (
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <div className="relative group cursor-pointer mb-4">
+                                    <Avatar className="w-32 h-32 border-4 border-accent">
+                                        <AvatarImage src={leadershipImages.mostafa.imageUrl} alt={leadershipImages.mostafa.description} data-ai-hint={leadershipImages.mostafa.imageHint} />
+                                        <AvatarFallback>MK</AvatarFallback>
+                                    </Avatar>
+                                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                        <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    </div>
+                                </div>
+                            </DialogTrigger>
+                            <DialogContent className="p-0 border-0 max-w-fit">
+                                <Image src={leadershipImages.mostafa.imageUrl} alt={leadershipImages.mostafa.description} width={600} height={600} className="rounded-lg" />
+                            </DialogContent>
+                        </Dialog>
+                    )}
                      <h3 className="text-xl md:text-2xl font-bold">أ. مصطفي قطامش</h3>
                      <p className="text-base md:text-lg text-muted-foreground">رئيس اتحاد طلاب تحيا مصر</p>
                 </div>
