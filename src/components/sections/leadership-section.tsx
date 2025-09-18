@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronUp, ZoomIn } from 'lucide-react';
+import { ChevronDown, ChevronUp, MessageCircle, ZoomIn } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function LeadershipSection() {
     const [isIslamExpanded, setIsIslamExpanded] = useState(false);
     const [isReemExpanded, setIsReemExpanded] = useState(false);
-    const [isAhmedExpanded, setIsAhmedExpanded] = useState(false);
+    const [isAhmedExpanded, setIsAhmedExpanded].useState(false);
     const [isHaninExpanded, setIsHaninExpanded] = useState(false);
 
     const leadershipImages = {
@@ -86,10 +86,14 @@ export default function LeadershipSection() {
                              <p>التزامه وانضباطه سر نجاحه، وتحليله العميق وإبداعه طريقته عشان يقدّم فعاليات مختلفة ومميزة. قائد مؤمن إن التنظيم فن، وإن الشغل الجماعي هو أقصر طريق للنجاح.</p>
                          </div>
                     </div>
-                    <div className="flex justify-center mt-4">
-                        <Button onClick={() => setIsIslamExpanded(!isIslamExpanded)} variant="outline" className="w-full md:w-auto">
+                    <div className="flex justify-center flex-wrap gap-2 mt-4">
+                        <Button onClick={() => setIsIslamExpanded(!isIslamExpanded)} variant="outline" className="flex-grow md:flex-grow-0">
                             {isIslamExpanded ? 'عرض أقل' : 'اقرأ المزيد'}
                             {isIslamExpanded ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                        </Button>
+                        <Button variant="outline" className="flex-grow md:flex-grow-0">
+                            <MessageCircle className="mr-2 h-4 w-4" />
+                            تواصل
                         </Button>
                     </div>
                 </div>
@@ -137,10 +141,14 @@ export default function LeadershipSection() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="flex justify-center mt-4">
-                            <Button onClick={() => setIsReemExpanded(!isReemExpanded)} variant="outline" className="w-full md:w-auto">
+                        <div className="flex justify-center flex-wrap gap-2 mt-auto pt-4">
+                            <Button onClick={() => setIsReemExpanded(!isReemExpanded)} variant="outline" className="flex-grow md:flex-grow-0">
                                 {isReemExpanded ? 'عرض أقل' : 'اقرأ المزيد'}
                                 {isReemExpanded ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                            </Button>
+                            <Button variant="outline" className="flex-grow md:flex-grow-0">
+                                <MessageCircle className="mr-2 h-4 w-4" />
+                                تواصل
                             </Button>
                         </div>
                     </div>
@@ -185,10 +193,14 @@ export default function LeadershipSection() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="flex justify-center mt-4">
-                            <Button onClick={() => setIsAhmedExpanded(!isAhmedExpanded)} variant="outline" className="w-full md:w-auto">
+                        <div className="flex justify-center flex-wrap gap-2 mt-auto pt-4">
+                            <Button onClick={() => setIsAhmedExpanded(!isAhmedExpanded)} variant="outline" className="flex-grow md:flex-grow-0">
                                 {isAhmedExpanded ? 'عرض أقل' : 'اقرأ المزيد'}
                                 {isAhmedExpanded ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                            </Button>
+                            <Button variant="outline" className="flex-grow md:flex-grow-0">
+                                <MessageCircle className="mr-2 h-4 w-4" />
+                                تواصل
                             </Button>
                         </div>
                     </div>
@@ -222,10 +234,14 @@ export default function LeadershipSection() {
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isHaninExpanded ? 'max-h-screen' : 'max-h-20 sm:max-h-24'}`}>
                         <p className="mt-4 pt-4 border-t text-center max-w-2xl mx-auto text-sm md:text-base leading-relaxed">حنين مثال للبنت القيادية اللي عارفة قيمة الالتزام والمتابعة الدقيقة. معروفة بشخصيتها الهادية، وحرصها الدايم إنها تتابع كل تفصيلة صغيرة قبل الكبيرة، عشان تضمن إن الشغل يطلع بأحسن صورة. بتتميز إنها منظمة، عندها مرونة في التعامل، وبتعرف توازن بين الحزم والروح الطيبة. حنين مؤمنة إن النجاح مش بس فكرة أو خطة… النجاح هو متابعة مستمرة عشان كل خطوة تتنفذ صح.</p>
                     </div>
-                     <div className="flex justify-center mt-4">
-                        <Button onClick={() => setIsHaninExpanded(!isHaninExpanded)} variant="outline" className="w-full md:w-auto">
+                     <div className="flex justify-center flex-wrap gap-2 mt-4">
+                        <Button onClick={() => setIsHaninExpanded(!isHaninExpanded)} variant="outline" className="flex-grow md:flex-grow-0">
                             {isHaninExpanded ? 'عرض أقل' : 'اقرأ المزيد'}
                             {isHaninExpanded ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                        </Button>
+                         <Button variant="outline" className="flex-grow md:flex-grow-0">
+                            <MessageCircle className="mr-2 h-4 w-4" />
+                            تواصل
                         </Button>
                     </div>
                 </div>
@@ -233,3 +249,5 @@ export default function LeadershipSection() {
         </section>
     );
 }
+
+    
