@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
       <AppHeader />
-      <main className="container mx-auto px-6 py-12">
+      <main className="container mx-auto px-4 sm:px-6 py-12">
         <HomeSection />
         <LeadershipSection />
         <OrganizationTypesSection />

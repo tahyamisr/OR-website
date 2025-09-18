@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -179,22 +179,22 @@ const mainOrganizationTypes: AccordionItemData[] = [
     {
         title: "التنظيم الأوفلاين (الميداني) 🎪",
         content: `
-            <h3 class="text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
             <div id="offline-accordion-content"></div>
         `
     },
     {
         title: "التنظيم الأونلاين (الرقمي) 💻",
         content: `
-            <h3 class="text-2xl font-bold mb-4 text-center">فريق التنظيم الرقمي</h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center">فريق التنظيم الرقمي</h3>
             <div id="online-accordion-content"></div>
             <div class="mt-12">
-                <h3 class="text-2xl font-bold mb-8 text-center">مقارنة بين أشهر برامج الاجتماعات (النسخ المجانية)</h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-8 text-center">مقارنة بين أشهر برامج الاجتماعات (النسخ المجانية)</h3>
                 <div class="grid md:grid-cols-2 gap-8 mb-8" id="platform-details-container">
                 </div>
                 <div class="card-custom p-4 rounded-lg">
-                    <h4 class="text-xl font-bold mb-4 text-center">مقارنة سريعة 📊</h4>
-                    <div class="relative h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
+                    <h4 class="text-lg md:text-xl font-bold mb-4 text-center">مقارنة سريعة 📊</h4>
+                    <div class="relative h-[40vh] md:h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
                         <canvas id="platformsChart"></canvas>
                     </div>
                 </div>
@@ -330,8 +330,8 @@ export default function OrganizationTypesSection() {
 
     return (
         <section id="organization-types" className="mb-16 scroll-mt-24">
-            <h2 className="text-3xl font-bold mb-8 text-center">أنواع التنظيم</h2>
-            <p className="text-lg text-center max-w-3xl mx-auto mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">أنواع التنظيم</h2>
+            <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
                 ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته: التنظيم الميداني للفعاليات على أرض الواقع، والتنظيم الرقمي للفعاليات عبر الإنترنت. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة.
             </p>
              <CustomAccordion items={mainOrganizationTypes} type="multiple" />
