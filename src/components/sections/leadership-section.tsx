@@ -101,13 +101,18 @@ export default function LeadershipSection() {
                                     <AvatarFallback>AH</AvatarFallback>
                                 </Avatar>
                             )}
-                            <div className="text-center sm:text-right">
+                            <div className="text-center sm:text-right flex-1">
                                 <h3 className="text-lg md:text-xl font-bold">احمد حسن عبدالرحيم</h3>
-                                <p className="text-sm md:text-md text-muted-foreground">نائب رئيس اللجنة المركزية للتنظيم</p>
+                                <p className="text-sm md:text-md text-muted-foreground mb-4">نائب رئيس اللجنة المركزية للتنظيم</p>
+                                <div className="flex justify-center sm:justify-start gap-x-6 gap-y-2 flex-wrap text-xs md:text-sm">
+                                    <p>🎂 <b className="font-semibold text-primary">العمر:</b> 22 سنة</p>
+                                    <p>🎓 <b className="font-semibold text-primary">المؤهل:</b> بكالوريوس تجارة</p>
+                                    <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> السعودية</p>
+                                </div>
                             </div>
                         </div>
-                        <div className={`flex-grow transition-all duration-500 ease-in-out overflow-hidden ${isAhmedExpanded ? 'max-h-screen' : 'max-h-20 sm:max-h-24'}`}>
-                            <p className="text-sm md:text-base leading-relaxed">
+                        <div className={`flex-grow transition-all duration-500 ease-in-out overflow-hidden ${isAhmedExpanded ? 'max-h-screen' : 'max-h-0'}`}>
+                            <p className="text-sm md:text-base leading-relaxed pt-4 border-t mt-4">
                             أحمد مش بس قائد، لكنه كمان العقل التقني 💻 اللي بيخلي التنظيم في الاتحاد يتطور بشكل مختلف. بصفته نائب رئيس اللجنة المركزية للتنظيم، قدر يضيف لمسة حديثة من خلال الاعتماد على التكنولوجيا: من أول الدعوات الإلكترونية، تسجيل الحضور، وصولًا لتسهيل استخراج الشهادات أونلاين، … كل ده بقى أبسط وأسرع بفضل فكره. ومع كل إنجاز رسمي، عمره ما بينسى اللمسة الإنسانية… هتلاقيه دايمًا أول واحد يفكرك بعيد ميلادك ويهنيك من قلبه 🎂. خريج كلية التجارة – شعبة المحاسبة باللغة الإنجليزية، وليه دور أساسي في إدارة وتنظيم فعاليات الاتحاد على مستوى الجمهورية علشان دايمًا تطلع بأفضل صورة. والأهم… إن البصمة اللي سايبها مش مجرد إنجازات، لكن كمان تصميمه للمساعد الذكي اللي إنت بتتكلم معاه دلوقتي✨🚀
                             </p>
                         </div>
