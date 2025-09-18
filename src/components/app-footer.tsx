@@ -1,16 +1,9 @@
-import { Separator } from "@/components/ui/separator";
-
 export default function AppFooter() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-background">
-      <Separator />
-      <div className="container mx-auto px-4 py-6">
-        <p className="text-center text-sm text-muted-foreground">
-          © {currentYear} تواصل اللجنة المركزية. جميع الحقوق محفوظة.
-        </p>
-      </div>
+    <footer className="bg-white mt-16 border-t">
+        <div className="container mx-auto px-6 py-4 text-center text-gray-600">
+            <p>&copy; 2025 لجنة التنظيم والمراسم - اتحاد طلاب تحيا مصر. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
   );
 }

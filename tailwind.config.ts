@@ -17,16 +17,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Tajawal', 'sans-serif'],
-        headline: ['Tajawal', 'sans-serif'],
+        body: ['Cairo', 'sans-serif'],
+        headline: ['Cairo', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: 'hsl(var(--background-custom))',
+        foreground: 'hsl(var(--foreground-custom))',
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: 'hsl(var(--card-custom))',
+          foreground: 'hsl(var(--foreground-custom))',
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
@@ -45,7 +45,7 @@ export default {
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
+          DEFAULT: 'hsl(var(--accent-custom))',
           foreground: 'hsl(var(--accent-foreground))',
         },
         destructive: {

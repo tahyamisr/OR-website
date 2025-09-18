@@ -6,31 +6,43 @@
   :root {
     --background: 225 100% 97%;
     --foreground: 222 84% 5%;
-    --card: 225 100% 97%;
-    --card-foreground: 222 84% 5%;
-    --popover: 225 100% 97%;
-    --popover-foreground: 222 84% 5%;
-    --primary: 224 100% 58%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 224 30% 90%;
-    --secondary-foreground: 222 84% 5%;
-    --muted: 224 30% 94%;
-    --muted-foreground: 222 20% 45%;
-    --accent: 26 100% 50%;
-    --accent-foreground: 0 0% 100%;
+
+    /* Custom Palette based on user's HTML */
+    --background-custom: 48 67% 98%; /* #FDFBF5 */
+    --foreground-custom: 180 25% 25%; /* #2F4F4F */
+    --card-custom: 0 0% 100%;
+    --accent-custom: 43 53% 57%; /* #C0A062 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 25% 25%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 25% 25%;
+    
+    --primary: 180 25% 25%;
+    --primary-foreground: 48 67% 98%;
+
+    --secondary: 48 33% 93%; /* #F9F6EE */
+    --secondary-foreground: 180 25% 25%;
+    
+    --muted: 48 33% 93%;
+    --muted-foreground: 180 25% 35%;
+
+    --accent: 43 53% 57%;
+    --accent-foreground: 180 25% 25%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 224 30% 85%;
-    --input: 224 30% 85%;
-    --ring: 224 100% 58%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+
+    --border: 45 33% 92%; /* #EAEAEA */
+    --input: 45 33% 92%;
+    --ring: 43 53% 57%;
+    
     --radius: 0.5rem;
   }
+
   .dark {
+    /* Keeping dark mode defaults for now, can be customized later */
     --background: 222 84% 5%;
     --foreground: 225 100% 97%;
     --card: 222 84% 5%;
@@ -50,11 +62,6 @@
     --border: 222 40% 20%;
     --input: 222 40% 20%;
     --ring: 224 100% 58%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
   }
 }
 
@@ -63,6 +70,34 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background-custom));
+    color: hsl(var(--foreground-custom));
+  }
+}
+
+@layer components {
+  .active-nav {
+      color: hsl(var(--accent));
+      border-bottom: 2px solid hsl(var(--accent));
+  }
+  .nav-link {
+      transition: color 0.3s, border-color 0.3s;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+  }
+  .nav-link:hover {
+      color: hsl(var(--accent));
+  }
+   .card-custom {
+      background-color: hsl(var(--card-custom));
+      border: 1px solid hsl(var(--border));
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+  .accordion-trigger-custom:hover {
+    background-color: hsl(var(--secondary));
+  }
+  .tab-btn.active {
+    background-color: hsl(var(--foreground-custom));
+    color: #FFFFFF;
   }
 }
