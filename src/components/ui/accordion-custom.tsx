@@ -19,9 +19,25 @@ type CustomAccordionProps = {
 };
 
 export default function CustomAccordion({ items, type = "single", defaultValue, collapsible }: CustomAccordionProps) {
-  const isCollapsible = collapsible === "true" || (collapsible === undefined && type === 'single');
+  const isCollapsible = collapsible === "true" || (type === "multiple" && collapsible !== "false") || (type === 'single' && collapsible !== 'false');
+
+  const accordionProps: {
+    type: "single" | "multiple";
+    collapsible?: true;
+    className: string;
+    defaultValue?: string;
+  } = {
+    type: type,
+    className: "w-full space-y-4",
+    defaultValue: defaultValue
+  };
+
+  if (isCollapsible) {
+    accordionProps.collapsible = true;
+  }
+
   return (
-    <Accordion type={type} collapsible={isCollapsible} className="w-full space-y-4" defaultValue={defaultValue}>
+    <Accordion {...accordionProps}>
       {items.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}`} className="card-custom rounded-lg overflow-hidden border-none">
           <AccordionTrigger className="accordion-trigger-custom w-full px-4 md:px-6 py-4 text-right flex justify-between items-center text-base md:text-lg font-bold hover:no-underline">
