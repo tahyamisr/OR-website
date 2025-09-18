@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -141,7 +141,7 @@ const onlineAccordionItems: AccordionItemData[] = [
             <li>التواصل مع المدرب والتأكد من جاهزيته.</li>
             <li>جمع معلومات شاملة عن المحاضرة واعداد المعلومات الجديرة بالذكر للمحاضرة.</li>
             <li>اعداد الأسئلة التحفيزية لجمهور تتعلق بمحتوي المحاضرة قبل ابلاغ الحاضرين بمعاد المحاضرة مع السيشن.</li>
-            <li>اعداد التعليمات الخاصة بالمحاضرة للجمهور المستفيد مثل وقت المحاضرة واوقات الأستراحة وتسجيل الحضور.</li>
+            <li>اعداد التعليمات الخاصة بالمحاضرة للمجهور المستفيد مثل وقت المحاضرة واوقات الأستراحة وتسجيل الحضور.</li>
         </ul>
       </li>
       <li><b class="font-semibold text-primary">المرحلة الثانية (تنظيم المجموعة):</b> بعد اعداد الجروب تبدأ مهمة التواصل مع الجمهور:
@@ -173,6 +173,34 @@ const onlineAccordionItems: AccordionItemData[] = [
       <li><b>التنسيق مع لجنة الميديا:</b> يتم التنسيق مع الميديا لشهادة الحضور.</li>
       <li><b>التنظيم يوم المحاضرة:</b> ما تم التنسيق به قبل المحاضرة يتم تنسيقه خلال المحاضرة من خلال شغل كل لجنة.</li>
     </ul>` }
+];
+
+const mainOrganizationTypes: AccordionItemData[] = [
+    {
+        title: "التنظيم الأوفلاين (الميداني)",
+        content: `
+            <h3 class="text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
+            <div id="offline-accordion-content"></div>
+        `
+    },
+    {
+        title: "التنظيم الأونلاين (الرقمي)",
+        content: `
+            <h3 class="text-2xl font-bold mb-4 text-center">فريق التنظيم الرقمي</h3>
+            <div id="online-accordion-content"></div>
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-8 text-center">مقارنة بين أشهر برامج الاجتماعات (النسخ المجانية)</h3>
+                <div class="grid md:grid-cols-2 gap-8 mb-8" id="platform-details-container">
+                </div>
+                <div class="card-custom p-4 rounded-lg">
+                    <h4 class="text-xl font-bold mb-4 text-center">مقارنة سريعة</h4>
+                    <div class="relative h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
+                        <canvas id="platformsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        `
+    }
 ];
 
 const chartData = {
@@ -236,7 +264,6 @@ const chartOptions: any = {
 };
 
 export default function OrganizationTypesSection() {
-    const [activeTab, setActiveTab] = useState('offline');
 
     const platformDetails = [
         { name: 'Google Meet', uses: 'مناسب لعقد المحاضرات والاجتماعات عبر الإنترنت خاصة في التعليم والمؤسسات.', features: ['تشغيل مباشر من المتصفح بدون تحميل', 'تكامل مع Gmail وGoogle Calendar', 'يدعم مشاركة الشاشة، عرض الشرائح، والرسائل النصية'], cons: ['التسجيل متاح فقط لحسابات Google Workspace المدفوعة', 'لا يحتوي على غرف جانبية (Breakout Rooms)'], participants: 'حتى 100 مشارك في النسخة المجانية.', time: 'حتى 60 دقيقة للاجتماع المجاني.'},
@@ -245,63 +272,69 @@ export default function OrganizationTypesSection() {
         { name: 'Telegram', uses: 'يُستخدم للمراسلة والمتابعة وليس لعقد الاجتماعات التعليمية التقليدية.', features: ['يدعم القنوات والمجموعات العملاقة', 'إرسال ملفات وميديا بدون قيود حجم كبيرة', 'وجود بوتات ذكية للتنظيم والرد التلقائي', 'يدعم مكالمات صوت وفيديو'], cons: ['لا يُستخدم لعقد محاضرات منظمة أو فصول دراسية', 'محدود في دعم المحاضرات متعددة المشاركين بالفيديو'], participants: 'حتى 200,000 عضو في المجموعات.', time: 'غير محدد في المكالمات الفردية، ولكن لا يوجد نظام "اجتماعات" رسمي.' }
     ];
 
+    React.useEffect(() => {
+        const offlineAccordionContainer = document.getElementById('offline-accordion-content');
+        if (offlineAccordionContainer) {
+            const root = (window as any).ReactDOM.createRoot(offlineAccordionContainer);
+            root.render(<CustomAccordion items={offlineAccordionItems} />);
+        }
+
+        const onlineAccordionContainer = document.getElementById('online-accordion-content');
+        if (onlineAccordionContainer) {
+             const root = (window as any).ReactDOM.createRoot(onlineAccordionContainer);
+            root.render(<CustomAccordion items={onlineAccordionItems} />);
+        }
+        
+        const platformContainer = document.getElementById('platform-details-container');
+        if(platformContainer){
+            platformContainer.innerHTML = platformDetails.map(platform => `
+                <div key=${platform.name} class="card-custom p-6 rounded-lg">
+                    <h4 class="text-xl font-bold mb-3">${platform.name}</h4>
+                    <p class="mb-4 text-sm text-muted-foreground">${platform.uses}</p>
+                    <div class="space-y-4">
+                        <div>
+                            <h5 class="font-semibold text-primary mb-1">المميزات:</h5>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                ${platform.features.map((feature: string) => `<li>${feature}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-primary mb-1">العيوب:</h5>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                ${platform.cons.map((con: string) => `<li>${con}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-4 text-sm pt-2 border-t mt-4">
+                            <p><b class="font-semibold">المشاركين:</b> ${platform.participants}</p>
+                            <p><b class="font-semibold">الوقت:</b> ${platform.time}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        const chartCanvas = document.getElementById('platformsChart') as HTMLCanvasElement;
+        if(chartCanvas){
+             let chart = ChartJS.getChart(chartCanvas);
+             if (chart) {
+                chart.destroy();
+            }
+            new ChartJS(chartCanvas.getContext('2d')!, {
+                type: 'bar',
+                data: chartData,
+                options: chartOptions,
+            });
+        }
+    }, []);
+
+
     return (
         <section id="organization-types" className="mb-16 scroll-mt-24">
             <h2 className="text-3xl font-bold mb-8 text-center">أنواع التنظيم</h2>
             <p className="text-lg text-center max-w-3xl mx-auto mb-8">
                 ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته: التنظيم الميداني للفعاليات على أرض الواقع، والتنظيم الرقمي للفعاليات عبر الإنترنت. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة.
             </p>
-            <div className="flex justify-center mb-8">
-                <div className="flex space-x-2 space-x-reverse rounded-lg p-1 bg-gray-200">
-                    <button className={`tab-btn px-4 py-2 rounded-md font-semibold transition ${activeTab === 'offline' ? 'active' : ''}`} onClick={() => setActiveTab('offline')}>التنظيم الأوفلاين (الميداني)</button>
-                    <button className={`tab-btn px-4 py-2 rounded-md font-semibold transition ${activeTab === 'online' ? 'active' : ''}`} onClick={() => setActiveTab('online')}>التنظيم الأونلاين (الرقمي)</button>
-                </div>
-            </div>
-
-            <div id="offline" className={`tab-content ${activeTab === 'offline' ? '' : 'hidden'}`}>
-                <h3 className="text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
-                <CustomAccordion items={offlineAccordionItems} />
-            </div>
-
-            <div id="online" className={`tab-content ${activeTab === 'online' ? '' : 'hidden'}`}>
-                 <h3 className="text-2xl font-bold mb-4 text-center">فريق التنظيم الرقمي</h3>
-                 <CustomAccordion items={onlineAccordionItems} />
-                 <div className="mt-12">
-                    <h3 className="text-2xl font-bold mb-8 text-center">مقارنة بين أشهر برامج الاجتماعات (النسخ المجانية)</h3>
-                     <div className="grid md:grid-cols-2 gap-8 mb-8">
-                        {platformDetails.map(platform => (
-                            <div key={platform.name} className="card-custom p-6 rounded-lg">
-                                <h4 className="text-xl font-bold mb-3">{platform.name}</h4>
-                                <p className="mb-4 text-sm text-muted-foreground">{platform.uses}</p>
-                                <div className="space-y-4">
-                                    <div>
-                                        <h5 className="font-semibold text-primary mb-1">المميزات:</h5>
-                                        <ul className="list-disc list-inside space-y-1 text-sm">
-                                            {platform.features.map((feature, i) => <li key={i}>{feature}</li>)}
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold text-primary mb-1">العيوب:</h5>
-                                        <ul className="list-disc list-inside space-y-1 text-sm">
-                                            {platform.cons.map((con, i) => <li key={i}>{con}</li>)}
-                                        </ul>
-                                    </div>
-                                    <div className="flex flex-wrap gap-4 text-sm pt-2 border-t mt-4">
-                                        <p><b className="font-semibold">المشاركين:</b> {platform.participants}</p>
-                                        <p><b className="font-semibold">الوقت:</b> {platform.time}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="card-custom p-4 rounded-lg">
-                        <h4 className="text-xl font-bold mb-4 text-center">مقارنة سريعة</h4>
-                        <div className="relative h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
-                            <Bar options={chartOptions} data={chartData} />
-                        </div>
-                    </div>
-                 </div>
-            </div>
+             <CustomAccordion items={mainOrganizationTypes} type="multiple" />
         </section>
     );
 }
