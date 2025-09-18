@@ -9,10 +9,10 @@ export default function AppHeader() {
 
   const navItems = [
     { href: '#home', label: 'الرئيسية' },
-    { href: '#leadership', label: 'الهيكل التنظيمي' },
+    { href: '#leadership', label: 'القيادات' },
     { href: '#organization-types', label: 'أنواع التنظيم' },
     { href: '#platforms', label: 'المنصات الرقمية' },
-    { href: '#skills', label: 'مهارات المنظم' },
+    { href: '#skills', label: 'مهارات المُنظِم' },
     { href: '#services', label: 'الخدمات الرقمية' },
   ];
 
