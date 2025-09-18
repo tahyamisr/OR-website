@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, ZoomIn } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function LeadershipSection() {
@@ -34,10 +34,15 @@ export default function LeadershipSection() {
                         {leadershipImages.islam && (
                              <Dialog>
                                 <DialogTrigger asChild>
-                                    <Avatar className="w-24 h-24 md:w-32 md:h-32 border-4 border-accent cursor-pointer">
-                                        <AvatarImage src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} data-ai-hint={leadershipImages.islam.imageHint}/>
-                                        <AvatarFallback>IF</AvatarFallback>
-                                    </Avatar>
+                                    <div className="relative group cursor-pointer">
+                                        <Avatar className="w-24 h-24 md:w-32 md:h-32 border-4 border-accent">
+                                            <AvatarImage src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} data-ai-hint={leadershipImages.islam.imageHint}/>
+                                            <AvatarFallback>IF</AvatarFallback>
+                                        </Avatar>
+                                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                            <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+                                    </div>
                                 </DialogTrigger>
                                 <DialogContent className="p-0 border-0 max-w-fit">
                                     <Image src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} width={600} height={600} className="rounded-lg" />
@@ -76,10 +81,15 @@ export default function LeadershipSection() {
                              {leadershipImages.reem && (
                                 <Dialog>
                                     <DialogTrigger asChild>
-                                        <Avatar className="w-20 h-20 border-2 border-accent cursor-pointer">
-                                            <AvatarImage src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} data-ai-hint={leadershipImages.reem.imageHint}/>
-                                            <AvatarFallback>RM</AvatarFallback>
-                                        </Avatar>
+                                        <div className="relative group cursor-pointer">
+                                            <Avatar className="w-20 h-20 border-2 border-accent">
+                                                <AvatarImage src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} data-ai-hint={leadershipImages.reem.imageHint}/>
+                                                <AvatarFallback>RM</AvatarFallback>
+                                            </Avatar>
+                                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
+                                            </div>
+                                        </div>
                                     </DialogTrigger>
                                     <DialogContent className="p-0 border-0 max-w-fit">
                                         <Image src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} width={600} height={600} className="rounded-lg" />
@@ -120,10 +130,15 @@ export default function LeadershipSection() {
                             {leadershipImages.ahmed && (
                                 <Dialog>
                                     <DialogTrigger asChild>
-                                        <Avatar className="w-20 h-20 border-2 border-accent cursor-pointer">
-                                            <AvatarImage src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} data-ai-hint={leadershipImages.ahmed.imageHint}/>
-                                            <AvatarFallback>AH</AvatarFallback>
-                                        </Avatar>
+                                         <div className="relative group cursor-pointer">
+                                            <Avatar className="w-20 h-20 border-2 border-accent">
+                                                <AvatarImage src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} data-ai-hint={leadershipImages.ahmed.imageHint}/>
+                                                <AvatarFallback>AH</AvatarFallback>
+                                            </Avatar>
+                                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                                <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
+                                            </div>
+                                        </div>
                                     </DialogTrigger>
                                     <DialogContent className="p-0 border-0 max-w-fit">
                                         <Image src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} width={600} height={600} className="rounded-lg" />
@@ -165,10 +180,15 @@ export default function LeadershipSection() {
                         {leadershipImages.hanin && (
                              <Dialog>
                                 <DialogTrigger asChild>
-                                    <Avatar className="w-24 h-24 border-4 border-accent cursor-pointer">
-                                        <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
-                                        <AvatarFallback>HI</AvatarFallback>
-                                    </Avatar>
+                                    <div className="relative group cursor-pointer">
+                                        <Avatar className="w-24 h-24 border-4 border-accent">
+                                            <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
+                                            <AvatarFallback>HI</AvatarFallback>
+                                        </Avatar>
+                                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-full flex items-center justify-center">
+                                            <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+                                    </div>
                                 </DialogTrigger>
                                 <DialogContent className="p-0 border-0 max-w-fit">
                                     <Image src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} width={600} height={600} className="rounded-lg" />
