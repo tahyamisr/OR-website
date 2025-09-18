@@ -22,9 +22,6 @@ export default function LeadershipSection() {
     return (
         <section id="leadership" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">الهيكل التنظيمي للجنة المركزية 🏛️</h2>
-             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
-                يقود اللجنة فريق من الشباب الطموح والمبدع الذي يجمع بين الخبرة الأكاديمية والعملية. يعملون بروح الفريق الواحد لتحقيق أهداف الاتحاد وتقديم فعاليات تليق باسم "تحيا مصر". تعرف على قادة لجنتنا.
-            </p>
             <div className="grid grid-cols-1 gap-8">
                 <div className="card-custom p-6 rounded-lg text-center">
                      <h3 className="text-xl md:text-2xl font-bold">أ. مصطفي قطامش</h3>
