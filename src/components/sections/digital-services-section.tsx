@@ -4,7 +4,7 @@ import { Bot, Link as LinkIcon, Lock } from 'lucide-react';
 export default function DigitalServicesSection() {
     return (
         <section id="services" className="scroll-mt-24">
-             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">الخدمات الرقمية المقدمة من اللجنة 🤖</h2>
+             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">الخدمات الرقمية</h2>
              <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
                 إيمانًا بأهمية التكنولوجيا، طورت لجنة التنظيم مجموعة من الحلول الرقمية الذكية لتبسيط الإجراءات وتعزيز تجربة المشاركين، مما يعكس رؤيتنا في دمج الinnovation مع العمل التنظيمي الاحترافي.
             </p>
