@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import CustomAccordion, { AccordionItemData } from '@/components/ui/accordion-custom';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 
 const offlineAccordionItems: AccordionItemData[] = [
     { title: '📝 1. التخطيط (Planning)', content: `<p>القسم المتخصص في تخطيط وهيكلة الحدث وتقسيم أعضاء التنظيم ووضع اكثر من خطة لإدارة أي حدث.</p><h5 class="font-bold mt-4 mb-2 text-primary">أدوات مساعدة:</h5><ul class="list-disc list-inside space-y-2"><li><b>خطة 5Ws:</b> لتحديد أساسيات الخطة (What/Why/Where/Who/When).</li><li><b>الخريطة الذهنية:</b> أداة لتنظيم الأفكار بطريقة مرنة وسهلة.</li><li><b>تحليل SWOT:</b> لتقييم نقاط القوة، والضعف، والفرص، والتهديدات.</li></ul>` },
@@ -192,16 +194,24 @@ export default function OrganizationTypesSection() {
                 ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className="card-custom rounded-xl p-4 md:p-6">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">🎪 التنظيم الميداني</h3>
-                    <CustomAccordion items={offlineAccordionItems} />
-                </div>
-                <div className="card-custom rounded-xl p-4 md:p-6">
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">💻 التنظيم الرقمي</h3>
-                    <CustomAccordion items={onlineAccordionItems} />
-                </div>
-            </div>
+            <Tabs defaultValue="offline" className="w-full">
+                <TabsList className="grid w-full grid-cols-2 h-auto p-1.5">
+                    <TabsTrigger value="offline" className="text-base md:text-lg py-2 data-[state=active]:shadow-md">🎪 التنظيم الميداني</TabsTrigger>
+                    <TabsTrigger value="online" className="text-base md:text-lg py-2 data-[state=active]:shadow-md">💻 التنظيم الرقمي</TabsTrigger>
+                </TabsList>
+                <TabsContent value="offline" className="mt-6">
+                    <div className="card-custom rounded-xl p-4 md:p-6">
+                         <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">أقسام التنظيم الميداني</h3>
+                         <CustomAccordion items={offlineAccordionItems} />
+                    </div>
+                </TabsContent>
+                <TabsContent value="online" className="mt-6">
+                     <div className="card-custom rounded-xl p-4 md:p-6">
+                        <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">أقسام التنظيم الرقمي</h3>
+                        <CustomAccordion items={onlineAccordionItems} />
+                    </div>
+                </TabsContent>
+            </Tabs>
 
             <div className="mt-12">
                 <CustomAccordion items={eventGoalsItems} type="multiple" />
@@ -209,3 +219,5 @@ export default function OrganizationTypesSection() {
         </section>
     );
 }
+
+    
