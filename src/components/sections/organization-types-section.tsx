@@ -1,10 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import CustomAccordion, { AccordionItemData } from '@/components/ui/accordion-custom';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, RefreshCw } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
 
 const offlineAccordionItems: AccordionItemData[] = [
     { title: '📝 1. التخطيط (Planning)', content: `<p>القسم المتخصص في تخطيط وهيكلة الحدث وتقسيم أعضاء التنظيم ووضع اكثر من خطة لإدارة أي حدث.</p><h5 class="font-bold mt-4 mb-2 text-primary">أدوات مساعدة:</h5><ul class="list-disc list-inside space-y-2"><li><b>خطة 5Ws:</b> لتحديد أساسيات الخطة (What/Why/Where/Who/When).</li><li><b>الخريطة الذهنية:</b> أداة لتنظيم الأفكار بطريقة مرنة وسهلة.</li><li><b>تحليل SWOT:</b> لتقييم نقاط القوة، والضعف، والفرص، والتهديدات.</li></ul>` },
@@ -188,103 +184,26 @@ const eventGoalsItems: AccordionItemData[] = [
     }
 ];
 
-
-const FlippableCard = ({ front, back }: { front: React.ReactNode, back: React.ReactNode }) => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleFlip = () => setIsFlipped(!isFlipped);
-
-    return (
-        <div className="perspective-1000 w-full h-[300px] md:h-[350px]" onClick={handleFlip}>
-            <div className={cn("relative w-full h-full text-center transition-transform duration-700 transform-style-3d", { 'rotate-y-180': isFlipped })}>
-                <div className="absolute w-full h-full backface-hidden card-custom rounded-xl p-6 flex flex-col justify-center items-center">
-                    {front}
-                </div>
-                <div className="absolute w-full h-full backface-hidden card-custom rounded-xl p-6 rotate-y-180 overflow-y-auto">
-                    {back}
-                </div>
-            </div>
-        </div>
-    );
-}
-
-const DetailsAccordion = ({ items }: { items: AccordionItemData[] }) => {
-    return <CustomAccordion items={items} />;
-}
-
-
 export default function OrganizationTypesSection() {
-    const [view, setView] = useState<'cards' | 'offline' | 'online'>('cards');
-
-    const renderContent = () => {
-        switch (view) {
-            case 'offline':
-                return <DetailsAccordion items={offlineAccordionItems} />;
-            case 'online':
-                return <DetailsAccordion items={onlineAccordionItems} />;
-            case 'cards':
-            default:
-                return (
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <FlippableCard
-                            front={
-                                <>
-                                    <div className="text-5xl mb-4">🎪</div>
-                                    <h3 className="text-xl md:text-2xl font-bold mb-2">التنظيم الميداني</h3>
-                                    <p className="text-muted-foreground">التحدي الحقيقي على أرض الواقع.</p>
-                                    <Button variant="link" className="mt-4 text-accent">اقلب البطاقة</Button>
-                                </>
-                            }
-                            back={
-                                <>
-                                    <h4 className="text-lg md:text-xl font-bold mb-4">أقسام التنظيم الميداني</h4>
-                                    <p className="text-sm md:text-base mb-6">من التخطيط الدقيق إلى التعامل مع الطوارئ، كل قسم له دور حيوي في نجاح الفعاليات على الأرض.</p>
-                                    <Button onClick={(e) => { e.stopPropagation(); setView('offline'); }} className="w-full">
-                                        استكشف الأقسام <ArrowRight className="mr-2 h-4 w-4" />
-                                    </Button>
-                                </>
-                            }
-                        />
-                         <FlippableCard
-                            front={
-                                <>
-                                    <div className="text-5xl mb-4">💻</div>
-                                    <h3 className="text-xl md:text-2xl font-bold mb-2">التنظيم الرقمي</h3>
-                                    <p className="text-muted-foreground">إدارة الفعاليات في العالم الافتراضي.</p>
-                                     <Button variant="link" className="mt-4 text-accent">اقلب البطاقة</Button>
-                                </>
-                            }
-                            back={
-                                <>
-                                    <h4 className="text-lg md:text-xl font-bold mb-4">فريق التنظيم الرقمي</h4>
-                                    <p className="text-sm md:text-base mb-6">تنظيم المحاضرات والفعاليات عبر الإنترنت يتطلب مهارات تقنية وتنسيقية فريدة لضمان تجربة سلسة للمشاركين.</p>
-                                    <Button onClick={(e) => { e.stopPropagation(); setView('online'); }} className="w-full">
-                                        اكتشف المراحل <ArrowRight className="mr-2 h-4 w-4" />
-                                    </Button>
-                                </>
-                            }
-                        />
-                    </div>
-                );
-        }
-    };
-
     return (
         <section id="organization-types" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">اختر مسار التحدي</h2>
-             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8 text-muted-foreground">
-                ينقسم عمل لجنة التنظيم إلى مسارين. اقلب البطاقة لمعرفة المزيد واختر المسار الذي تريد استكشافه.
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">أنواع التنظيم ومساراته</h2>
+            <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8 text-muted-foreground">
+                ينقسم عمل لجنة التنظيم إلى مسارين رئيسيين لكل منهما طبيعته الخاصة ومتطلباته. استكشف تفاصيل كل نوع وكيفية عمل فرقه المتخصصة.
             </p>
 
-            {view !== 'cards' && (
-                 <Button onClick={() => setView('cards')} variant="outline" className="mb-8">
-                    <RefreshCw className="ml-2 h-4 w-4" /> العودة إلى المسارات
-                </Button>
-            )}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="card-custom rounded-xl p-4 md:p-6">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">🎪 التنظيم الميداني</h3>
+                    <CustomAccordion items={offlineAccordionItems} />
+                </div>
+                <div className="card-custom rounded-xl p-4 md:p-6">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">💻 التنظيم الرقمي</h3>
+                    <CustomAccordion items={onlineAccordionItems} />
+                </div>
+            </div>
 
-            {renderContent()}
-
-             <div className="mt-12">
+            <div className="mt-12">
                 <CustomAccordion items={eventGoalsItems} type="multiple" />
             </div>
         </section>
