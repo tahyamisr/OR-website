@@ -29,7 +29,7 @@ const leadershipConceptsItems: AccordionItemData[] = [
     { title: 'القائد 👑 مقابل المدير 👨‍💼', content: `<p>القيادة هي فن توجيه وإلهام الأفراد. القائد يلهم، يركز على الرؤية، يفوض الصلاحيات، ويقول "نحن". بينما المدير يحرك، يركز على الاحتياجات الحالية، يستند على المنصب، ويقول "أنا". القائد يبني الثقة، والمدير يعتمد على السلطة.</p>
     <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 mt-4">
         <div>
-            <h4 class="font-bold text-lg mb-2 text-primary">القائد 👑</h4>
+            <h4 class="font-bold text-lg mb-2 text-black">القائد 👑</h4>
             <ul class="list-disc list-inside space-y-2">
                 <li>يلهم العاملين</li>
                 <li>يستند على ثقة الفريق فيه</li>
@@ -45,7 +45,7 @@ const leadershipConceptsItems: AccordionItemData[] = [
             </ul>
         </div>
         <div>
-            <h4 class="font-bold text-lg mb-2 text-primary">المدير 👨‍💼</h4>
+            <h4 class="font-bold text-lg mb-2 text-black">المدير 👨‍💼</h4>
             <ul class="list-disc list-inside space-y-2">
                 <li>يحرك العاملين</li>
                 <li>يستند على المنصب</li>
@@ -63,20 +63,20 @@ const leadershipConceptsItems: AccordionItemData[] = [
     ` },
     { title: 'الثقة بالنفس 💪 مقابل الغرور 😒', content: `<div class="space-y-4">
         <div>
-            <h4 class="font-bold text-lg mb-2 text-primary">الثقة بالنفس 💪</h4>
+            <h4 class="font-bold text-lg mb-2 text-black">الثقة بالنفس 💪</h4>
             <p>هي إيمان حقيقي بالقدرات، تواضع وتقدير للآخرين، ودافع لتحقيق الأهداف. هي العمود الفقري لشخصية الإنسان. من أهميتها زيادة الإنجاز وتحسين العلاقات. مصدرها الإنجازات السابقة والتعلم وتخطي التحديات.</p>
         </div>
         <div>
-            <h4 class="font-bold text-lg mb-2 text-primary">الغرور 😒</h4>
+            <h4 class="font-bold text-lg mb-2 text-black">الغرور 😒</h4>
             <p>هو شعور مبالغ فيه بالذات والتقدير الزائد للنفس. ويتصف الشخص المغرور بالتكبر والاحتقار للآخرين. من أسبابه السلطة المفاجئة والنجاح السريع. آثاره السلبية تشمل فشل العلاقات وتعطل النمو الشخصي.</p>
         </div>
         <div>
-            <h4 class="font-bold text-lg mb-2 text-primary">تحديات تعزيز الثقة</h4>
+            <h4 class="font-bold text-lg mb-2 text-black">تحديات تعزيز الثقة</h4>
             <p>أبرزها التفكير السلبي، والخوف من الفشل، والمقارنة المستمرة بالآخرين. هذه العوامل تحد من قدرتنا على تحقيق أهدافنا.</p>
         </div>
     </div>`},
      { title: 'إدارة الوقت وتحديد الأولويات ⏰', content: `<p>إدارة الوقت هي أسلوب حياة وليست مجرد مهارة. تتضمن تحديد الأولويات وتنظيم المهام لاستغلال كل لحظة. الوقت مورد محدود لا يمكن تعويضه، وإدارته بكفاءة عبر استراتيجيات واضحة هي مفتاح تحقيق الأهداف وتقليل الضغوط. يمكنك تقييم علاقتك بالوقت من خلال جدول بسيط لتعرف أين تقف.</p>
-    <h4 class="font-bold text-lg my-3 text-primary">فوائد تنظيم الوقت</h4>
+    <h4 class="font-bold text-lg my-3 text-black">فوائد تنظيم الوقت</h4>
     <ul class="list-disc list-inside space-y-2">
         <li>✅ انجاز الأهداف والشعور بالتحسن المستمر.</li>
         <li>📈 تحسين الانتاجية في العمل والحياة الشخصية.</li>
@@ -103,29 +103,29 @@ const benefitsAccordionItems: AccordionItemData[] = [
 export default function SkillsSection() {
     return (
         <section id="skills" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">المهارات والصفات التفصيلية لعضو التنظيم</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-black">المهارات والصفات التفصيلية لعضو التنظيم</h2>
             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-12">
                 يعتمد نجاح التنظيم على مهارات وصفات أعضاء الفريق. نستعرض هنا المهارات والصفات الأساسية لكل منظم ناجح.
             </p>
             
             <div className="space-y-12">
                 <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center">المهارات الأساسية (Core Skills) 🛠️</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">المهارات الأساسية (Core Skills) 🛠️</h3>
                     <CustomAccordion items={coreSkillsItems} type="multiple" />
                 </div>
 
                 <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center">الصفات الشخصية (Personal Attributes) 😊</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">الصفات الشخصية (Personal Attributes) 😊</h3>
                     <CustomAccordion items={personalAttributesItems} type="multiple" />
                 </div>
 
                 <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center">مفاهيم قيادية وإدارية 🧭</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">مفاهيم قيادية وإدارية 🧭</h3>
                      <CustomAccordion items={leadershipConceptsItems} type="multiple" />
                 </div>
                 
                 <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center">الفوائد والأخطاء الشائعة</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-6 text-center text-black">الفوائد والأخطاء الشائعة</h3>
                     <CustomAccordion items={benefitsAccordionItems} type="multiple" />
                 </div>
             </div>

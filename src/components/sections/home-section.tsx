@@ -12,7 +12,7 @@ export default function HomeSection() {
                     className="rounded-full"
                 />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">لجنة التنظيم والمراسم</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center text-black">لجنة التنظيم والمراسم</h2>
             <p className="text-base md:text-lg text-center max-w-3xl mx-auto mb-8">
                 لجنة التنظيم هي العصب الأساسي لنجاح أي حدث، حيث تتولى التخطيط والتنفيذ والإدارة لضمان سير العمل بفعالية وتنظيم.
             </p>

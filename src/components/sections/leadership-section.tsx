@@ -23,7 +23,7 @@ export default function LeadershipSection() {
 
     return (
         <section id="leadership" className="scroll-mt-24">
-            <h2 className="text-xl md:text-2xl font-bold mb-8 text-center">الهيكل التنظيمي للجنة المركزية 🏛️</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-8 text-center text-black">الهيكل التنظيمي للجنة المركزية 🏛️</h2>
             <div className="grid grid-cols-1 gap-8">
                 <div className="card-custom p-6 rounded-lg text-center flex flex-col items-center">
                     {leadershipImages.mostafa && (
@@ -44,7 +44,7 @@ export default function LeadershipSection() {
                             </DialogContent>
                         </Dialog>
                     )}
-                     <h3 className="text-xl md:text-2xl font-bold">أ. مصطفي قطامش</h3>
+                     <h3 className="text-xl md:text-2xl font-bold text-black">أ. مصطفي قطامش</h3>
                      <p className="text-base md:text-lg text-muted-foreground">رئيس اتحاد طلاب تحيا مصر</p>
                 </div>
                 
@@ -69,7 +69,7 @@ export default function LeadershipSection() {
                             </Dialog>
                         )}
                         <div className="text-center md:text-right flex-1">
-                             <h3 className="text-xl md:text-2xl font-bold">مهندس. اسلام فارس عبد الجليل</h3>
+                             <h3 className="text-xl md:text-2xl font-bold text-black">مهندس. اسلام فارس عبد الجليل</h3>
                              <p className="text-base md:text-lg text-muted-foreground mb-4">رئيس اللجنة المركزية للتنظيم</p>
                              <div className="text-sm md:text-base space-y-1">
                                  <p>🎂 <b className="font-semibold text-primary">العمر:</b> 25 سنه</p>
@@ -116,7 +116,7 @@ export default function LeadershipSection() {
                                 </Dialog>
                             )}
                             <div className="text-center sm:text-right flex-1">
-                                <h3 className="text-lg md:text-xl font-bold">ريـــم مـنصــــور الــفقــي</h3>
+                                <h3 className="text-lg md:text-xl font-bold text-black">ريـــم مـنصــــور الــفقــي</h3>
                                 <p className="text-sm md:text-md text-muted-foreground mb-4">نائب رئيس اللجنة المركزية للتنظيم</p>
                                 <div className="text-xs md:text-sm space-y-1">
                                     <p>🎂 <b className="font-semibold text-primary">العمر:</b> 20 سنة</p>
@@ -165,7 +165,7 @@ export default function LeadershipSection() {
                                 </Dialog>
                             )}
                             <div className="text-center sm:text-right flex-1">
-                                <h3 className="text-lg md:text-xl font-bold">احمد حسن عبدالرحيم</h3>
+                                <h3 className="text-lg md:text-xl font-bold text-black">احمد حسن عبدالرحيم</h3>
                                 <p className="text-sm md:text-md text-muted-foreground mb-4">نائب رئيس اللجنة المركزية للتنظيم</p>
                                 <div className="text-xs md:text-sm space-y-1">
                                     <p>🎂 <b className="font-semibold text-primary">العمر:</b> 22 سنة</p>
@@ -215,7 +215,7 @@ export default function LeadershipSection() {
                             </Dialog>
                         )}
                         <div className="text-center">
-                            <h3 className="text-lg md:text-xl font-bold">حـنيـن اســلام مـبـــروك</h3>
+                            <h3 className="text-lg md:text-xl font-bold text-black">حـنيـن اســلام مـبـــروك</h3>
                             <p className="text-sm md:text-md text-muted-foreground">نائب رئيس اللجنة المركزية للتنظيم للمتابعة</p>
                         </div>
                     </div>

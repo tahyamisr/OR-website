@@ -45,7 +45,7 @@ export default function AppHeader() {
             height={40}
             className="rounded-full"
           />
-          <div className="text-base md:text-lg font-bold text-gray-800">لجنة التنظيم والمراسم</div>
+          <div className="text-base md:text-lg font-bold text-black">لجنة التنظيم والمراسم</div>
         </a>
         <div className="hidden md:flex space-x-8 space-x-reverse items-center">
           {navItems.map(item => (

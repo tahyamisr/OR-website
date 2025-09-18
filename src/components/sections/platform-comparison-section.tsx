@@ -9,7 +9,7 @@ const platformDetails: AccordionItemData[] = [
             <p class="mb-4 text-sm text-muted-foreground">مناسب لعقد المحاضرات والاجتماعات عبر الإنترنت خاصة في التعليم والمؤسسات.</p>
             <div class="space-y-4">
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">المميزات:</h4>
+                    <h4 class="font-semibold text-black mb-1">المميزات:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>✔️ تشغيل مباشر من المتصفح بدون تحميل</li>
                         <li>✔️ تكامل مع Gmail وGoogle Calendar</li>
@@ -17,7 +17,7 @@ const platformDetails: AccordionItemData[] = [
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">العيوب:</h4>
+                    <h4 class="font-semibold text-black mb-1">العيوب:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>❌ التسجيل متاح فقط لحسابات Google Workspace المدفوعة</li>
                         <li>❌ لا يحتوي على غرف جانبية (Breakout Rooms)</li>
@@ -35,7 +35,7 @@ const platformDetails: AccordionItemData[] = [
             <p class="mb-4 text-sm text-muted-foreground">مثالي للمحاضرات الأونلاين، الدورات التدريبية، والاجتماعات الكبيرة.</p>
             <div class="space-y-4">
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">المميزات:</h4>
+                    <h4 class="font-semibold text-black mb-1">المميزات:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>✔️ جودة صوت وفيديو عالية</li>
                         <li>✔️ يدعم الغرف الجانبية (Breakout Rooms)</li>
@@ -44,7 +44,7 @@ const platformDetails: AccordionItemData[] = [
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">العيوب:</h4>
+                    <h4 class="font-semibold text-black mb-1">العيوب:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>❌ محدودية الوقت في النسخة المجانية</li>
                         <li>❌ يتطلب تحميل البرنامج على الجهاز</li>
@@ -62,7 +62,7 @@ const platformDetails: AccordionItemData[] = [
             <p class="mb-4 text-sm text-muted-foreground">مثالي للمؤسسات التعليمية والشركات لتنظيم الفرق والملفات والاجتماعات.</p>
             <div class="space-y-4">
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">المميزات:</h4>
+                    <h4 class="font-semibold text-black mb-1">المميزات:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>✔️ متكامل مع Microsoft Office 365</li>
                         <li>✔️ تنظيم الفرق والقنوات</li>
@@ -71,7 +71,7 @@ const platformDetails: AccordionItemData[] = [
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">العيوب:</h4>
+                    <h4 class="font-semibold text-black mb-1">العيوب:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>❌ واجهته معقدة نسبيًا للمبتدئين</li>
                         <li>❌ يحتاج حساب Microsoft</li>
@@ -89,7 +89,7 @@ const platformDetails: AccordionItemData[] = [
             <p class="mb-4 text-sm text-muted-foreground">يُستخدم للمراسلة والمتابعة وليس لعقد الاجتماعات التعليمية التقليدية.</p>
             <div class="space-y-4">
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">المميزات:</h4>
+                    <h4 class="font-semibold text-black mb-1">المميزات:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>✔️ يدعم القنوات والمجموعات العملاقة</li>
                         <li>✔️ إرسال ملفات وميديا بدون قيود حجم كبيرة</li>
@@ -98,7 +98,7 @@ const platformDetails: AccordionItemData[] = [
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-primary mb-1">العيوب:</h4>
+                    <h4 class="font-semibold text-black mb-1">العيوب:</h4>
                     <ul class="list-disc list-inside space-y-1 text-sm">
                         <li>❌ لا يُستخدم لعقد محاضرات منظمة أو فصول دراسية</li>
                         <li>❌ محدود في دعم المحاضرات متعددة المشاركين بالفيديو</li>
@@ -116,7 +116,7 @@ const platformDetails: AccordionItemData[] = [
 export default function PlatformComparisonSection() {
     return (
         <section id="platforms" className="scroll-mt-24">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">مقارنة بين أشهر المنصات الرقمية (النسخ المجانية)</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-black">مقارنة بين أشهر المنصات الرقمية (النسخ المجانية)</h2>
             <div className="mb-12">
                  <CustomAccordion items={platformDetails} type="multiple" />
             </div>
