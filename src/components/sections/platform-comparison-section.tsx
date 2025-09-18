@@ -88,21 +88,6 @@ export default function PlatformComparisonSection() {
         { name: 'Telegram', uses: 'يُستخدم للمراسلة والمتابعة وليس لعقد الاجتماعات التعليمية التقليدية.', features: ['يدعم القنوات والمجموعات العملاقة', 'إرسال ملفات وميديا بدون قيود حجم كبيرة', 'وجود بوتات ذكية للتنظيم والرد التلقائي', 'يدعم مكالمات صوت وفيديو'], cons: ['لا يُستخدم لعقد محاضرات منظمة أو فصول دراسية', 'محدود في دعم المحاضرات متعددة المشاركين بالفيديو'], participants: 'حتى 200,000 عضو في المجموعات.', time: 'غير محدد في المكالمات الفردية، ولكن لا يوجد نظام "اجتماعات" رسمي.' }
     ];
 
-    React.useEffect(() => {
-        const chartCanvas = document.getElementById('platformsChart') as HTMLCanvasElement;
-        if(chartCanvas){
-             let chart = ChartJS.getChart(chartCanvas);
-             if (chart) {
-                chart.destroy();
-            }
-            new ChartJS(chartCanvas.getContext('2d')!, {
-                type: 'bar',
-                data: chartData,
-                options: chartOptions,
-            });
-        }
-    }, []);
-
     return (
         <section id="platforms" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">مقارنة بين أشهر المنصات الرقمية (النسخ المجانية)</h2>
@@ -135,7 +120,7 @@ export default function PlatformComparisonSection() {
             <div className="card-custom p-4 rounded-lg">
                 <h3 className="text-lg md:text-xl font-bold mb-4 text-center">📊 مقارنة سريعة</h3>
                 <div className="relative h-[40vh] md:h-[50vh] max-h-96 w-full max-w-2xl mx-auto">
-                    <canvas id="platformsChart"></canvas>
+                    <Bar options={chartOptions} data={chartData} />
                 </div>
             </div>
         </section>
