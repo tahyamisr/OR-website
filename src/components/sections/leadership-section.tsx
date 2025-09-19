@@ -335,7 +335,7 @@ export default function LeadershipSection() {
                              <div className="text-xs md:text-sm space-y-1">
                                 <p>🎂 <b className="font-semibold text-primary">العمر:</b> 22 سنة</p>
                                 <p>🎓 <b className="font-semibold text-primary">المؤهل:</b> ليسانس حقوق</p>
-                                <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> محافظة الشرقية</p>
+                                <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> محافظة الدقهلية</p>
                             </div>
                         </div>
                     </div>
@@ -376,4 +376,5 @@ export default function LeadershipSection() {
     );
 }
 
+    
     
