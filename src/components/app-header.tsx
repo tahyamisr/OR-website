@@ -2,10 +2,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { cn } from "@/lib/utils";
 
 export default function AppHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { href: '#home', label: 'الرئيسية' },
@@ -18,6 +20,14 @@ export default function AppHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Header scroll effect
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
+      // Active section highlighting
       const sections = document.querySelectorAll('section');
       let currentSection = 'home';
       sections.forEach(section => {
@@ -35,7 +45,10 @@ export default function AppHeader() {
   }, []);
 
   return (
-    <header id="header" className="bg-white shadow-md sticky top-0 z-50">
+    <header id="header" className={cn(
+      "sticky top-0 z-50 transition-all duration-300",
+      isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
+    )}>
       <nav className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-3">
           <Image 
@@ -60,7 +73,11 @@ export default function AppHeader() {
           </button>
         </div>
       </nav>
-      <div id="mobile-menu" className={`${menuOpen ? 'block' : 'hidden'} md:hidden bg-white`}>
+      <div id="mobile-menu" className={cn(
+        "md:hidden transition-all duration-300 ease-in-out overflow-hidden",
+        menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0',
+        isScrolled ? 'bg-white/95' : 'bg-white'
+      )}>
         {navItems.map(item => (
           <a 
             key={item.href} 
