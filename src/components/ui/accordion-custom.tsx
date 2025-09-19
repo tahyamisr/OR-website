@@ -21,7 +21,7 @@ export default function CustomAccordion({ items, type = "single", defaultValue }
   return (
     <Accordion 
       type={type} 
-      collapsible={type === 'single' ? true : undefined} 
+      collapsible={type === 'single'}
       className="w-full space-y-4" 
       defaultValue={defaultValue}
     >
