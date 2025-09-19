@@ -309,12 +309,12 @@ export default function LeadershipSection() {
                 </div>
 
                  <div className="card-custom p-6 rounded-lg col-span-full">
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col md:flex-row items-center gap-6">
                         {leadershipImages.hanin && (
                              <Dialog>
                                 <DialogTrigger asChild>
                                     <div className="relative group cursor-pointer">
-                                        <Avatar className="w-24 h-24 border-4 border-accent">
+                                        <Avatar className="w-24 h-24 md:w-32 md:h-32 border-4 border-accent">
                                             <AvatarImage src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} data-ai-hint={leadershipImages.hanin.imageHint}/>
                                             <AvatarFallback>HI</AvatarFallback>
                                         </Avatar>
@@ -329,12 +329,17 @@ export default function LeadershipSection() {
                                 </DialogContent>
                             </Dialog>
                         )}
-                        <div className="text-center">
+                        <div className="text-center md:text-right flex-1">
                             <h3 className="text-lg md:text-xl font-bold text-black">حـنيـن اســلام مـبـــروك</h3>
-                            <p className="text-sm md:text-md text-muted-foreground">نائب رئيس اللجنة المركزية للتنظيم للمتابعة</p>
+                            <p className="text-sm md:text-md text-muted-foreground mb-4">نائب رئيس اللجنة المركزية للتنظيم للمتابعة</p>
+                             <div className="text-xs md:text-sm space-y-1">
+                                <p>🎂 <b className="font-semibold text-primary">العمر:</b> 22 سنة</p>
+                                <p>🎓 <b className="font-semibold text-primary">المؤهل:</b> ليسانس حقوق</p>
+                                <p>📍 <b className="font-semibold text-primary">محل الميلاد:</b> محافظة الشرقية</p>
+                            </div>
                         </div>
                     </div>
-                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isHaninExpanded ? 'max-h-screen' : 'max-h-20 sm:max-h-24'}`}>
+                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isHaninExpanded ? 'max-h-screen' : 'max-h-0'}`}>
                         <p className="mt-4 pt-4 border-t text-center max-w-2xl mx-auto text-sm md:text-base leading-relaxed">حنين مثال للبنت القيادية اللي عارفة قيمة الالتزام والمتابعة الدقيقة. معروفة بشخصيتها الهادية، وحرصها الدايم إنها تتابع كل تفصيلة صغيرة قبل الكبيرة، عشان تضمن إن الشغل يطلع بأحسن صورة. بتتميز إنها منظمة، عندها مرونة في التعامل، وبتعرف توازن بين الحزم والروح الطيبة. حنين مؤمنة إن النجاح مش بس فكرة أو خطة… النجاح هو متابعة مستمرة عشان كل خطوة تتنفذ صح.</p>
                     </div>
                      <div className="flex justify-center flex-wrap gap-2 mt-4">
@@ -370,3 +375,5 @@ export default function LeadershipSection() {
         </section>
     );
 }
+
+    
