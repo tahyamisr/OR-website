@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'دليل لجنة التنظيم والمراسم - اتحاد طلاب تحيا مصر',
   description: 'كل حاجة محتاج تعرفها عن لجنة التنظيم المركزية',
+  icons: {
+    icon: 'https://www.dropbox.com/scl/fi/3gtq58x7915iaoevz9pvk/icon.png?rlkey=6m3fahu2vkow1ebiyu2q3hi7f&raw=1',
+  },
 };
 
 export default function RootLayout({
