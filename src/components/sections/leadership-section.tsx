@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp, MessageCircle, ZoomIn, Mail } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -66,6 +66,7 @@ export default function LeadershipSection() {
                                 </div>
                             </DialogTrigger>
                             <DialogContent className="p-0 border-0 max-w-fit">
+                                <DialogTitle className="sr-only">{leadershipImages.mostafa.description}</DialogTitle>
                                 <Image src={leadershipImages.mostafa.imageUrl} alt={leadershipImages.mostafa.description} width={600} height={600} className="rounded-lg" />
                             </DialogContent>
                         </Dialog>
@@ -121,6 +122,7 @@ export default function LeadershipSection() {
                                     </div>
                                 </DialogTrigger>
                                 <DialogContent className="p-0 border-0 max-w-fit">
+                                    <DialogTitle className="sr-only">{leadershipImages.islam.description}</DialogTitle>
                                     <Image src={leadershipImages.islam.imageUrl} alt={leadershipImages.islam.description} width={600} height={600} className="rounded-lg" />
                                 </DialogContent>
                             </Dialog>
@@ -190,6 +192,7 @@ export default function LeadershipSection() {
                                         </div>
                                     </DialogTrigger>
                                     <DialogContent className="p-0 border-0 max-w-fit">
+                                        <DialogTitle className="sr-only">{leadershipImages.reem.description}</DialogTitle>
                                         <Image src={leadershipImages.reem.imageUrl} alt={leadershipImages.reem.description} width={600} height={600} className="rounded-lg" />
                                     </DialogContent>
                                 </Dialog>
@@ -261,6 +264,7 @@ export default function LeadershipSection() {
                                         </div>
                                     </DialogTrigger>
                                     <DialogContent className="p-0 border-0 max-w-fit">
+                                        <DialogTitle className="sr-only">{leadershipImages.ahmed.description}</DialogTitle>
                                         <Image src={leadershipImages.ahmed.imageUrl} alt={leadershipImages.ahmed.description} width={600} height={600} className="rounded-lg" />
                                     </DialogContent>
                                 </Dialog>
@@ -333,6 +337,7 @@ export default function LeadershipSection() {
                                     </div>
                                 </DialogTrigger>
                                 <DialogContent className="p-0 border-0 max-w-fit">
+                                    <DialogTitle className="sr-only">{leadershipImages.hanin.description}</DialogTitle>
                                     <Image src={leadershipImages.hanin.imageUrl} alt={leadershipImages.hanin.description} width={600} height={600} className="rounded-lg" />
                                 </DialogContent>
                             </Dialog>
@@ -380,3 +385,4 @@ export default function LeadershipSection() {
 }
 
     
+
